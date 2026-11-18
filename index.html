@@ -1147,8 +1147,8 @@
 
           <!-- Bottom CTA Button Bar (Component 10: centered content, exact Figma match) -->
           <div class="cta-banner-btn cta-banner-consultation w-full bg-[#d22630] h-[105px] relative overflow-hidden flex items-center justify-center cursor-pointer group select-none" onclick="openConsultationModal()">
-            <!-- Smooth Red Sweep Background -->
-            <div class="cta-sweep-bg bg-[#d22630] absolute inset-0 pointer-events-none"></div>
+            <!-- Smooth Orange/Yellow Sweep Background on Desktop -->
+            <div class="cta-sweep-bg bg-[#f68d2e] absolute inset-0 pointer-events-none"></div>
 
             <!-- Content Row (Strictly Centered, w-[344px] as in Figma) -->
             <div class="cta-consultation-centered relative z-10 w-[344px] flex items-center justify-between">
@@ -1157,7 +1157,10 @@
               </span>
               <div class="cta-icon-box w-[42px] h-[41px] bg-[#eef2f5] rounded flex items-center justify-center shrink-0 shadow-sm relative overflow-hidden">
                 <img src="assets/f54f5b9bd1123cee6a116cb4fab8b94bd6797d5d.svg" alt="" class="cta-icon-default absolute w-6 h-6" />
-                <img src="assets/6ee1927149d47d923d5b183b9ca6a2f2eeb82c20.svg" alt="" class="cta-icon-hover absolute w-6 h-6" />
+                <!-- Desktop Yellow/Orange Arrow on Hover -->
+                <img src="assets/icon_arrow_orange.svg" alt="" class="cta-icon-hover hidden sm:block absolute w-6 h-6" />
+                <!-- Mobile Red Arrow -->
+                <img src="assets/6ee1927149d47d923d5b183b9ca6a2f2eeb82c20.svg" alt="" class="cta-icon-hover sm:hidden absolute w-6 h-6" />
               </div>
             </div>
           </div>
