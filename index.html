@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Limenzy — AI & Automation Partner | Gitex Dubai</title>
+  <meta name="description"
+    content="Limenzy builds WhatsApp automation, AI chatbots and custom AI solutions that help businesses respond faster, cut costs and grow revenue.">
+
+  <!-- Preconnect and Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Geist+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS Engine (Local standalone bundle for 100% offline reliability) -->
+  <script src="tailwind.cdn.js"></script>
+  <script>
+    if (typeof tailwind === 'undefined') {
+      document.write('<script src="https://cdn.tailwindcss.com"><\/script>');
+    }
+  </script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            limenzy: {
+              red: '#D22630',
+              'red-hover': '#B81D26',
+              black: '#1D252D',
+              light: '#EEF2F5',
+              dark: '#0B0F13',
+              card: '#12181F',
+              border: '#DEE4E9',
+              'border-dark': '#242E38'
+            }
+          },
+          fontFamily: {
+            heading: ['"Archivo"', 'sans-serif'],
+            archivo: ['"Archivo"', 'sans-serif'],
+            mono: ['"Geist Mono"', 'monospace'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            inter: ['"Inter"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css?v=fresh_20261118_v12">
+</head>
+
+<body class="bg-[#EEF2F5] dark:bg-[#0B0F13] text-[#1D252D] dark:text-[#F2F1EE] transition-colors duration-200">
+
+  <!-- =========================================================================
+       STICKY HEADER
+       Sticky navigation bar pinned to the top (height: 48px), matching Figma
+       ========================================================================= -->
+  <header id="stickyHeader" class="sticky-header">
+    <!-- Left Navigation Group -->
+    <div class="header-left-group">
+      <!-- Limenzy Logomark (w: 65px, h: 48px) -->
+      <a href="#" class="header-logo-container hover:opacity-85 transition-opacity" title="Limenzy Home"
+        aria-label="Limenzy Home">
+        <svg class="header-logo-svg" width="34" height="25" viewBox="0 0 33.681 24.818" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <!-- Left Chevron -->
+          <g transform="translate(0, 4.547)">
+            <path class="logo-chevron-side"
+              d="M8.87722 3.16094C9.40918 2.66953 10.3318 1.71135 9.44381 0.553316C8.9257 -0.120149 7.73294 -0.161213 7.11924 0.334304C5.37373 1.74831 0.526481 6.60218 0.526481 6.60218C0.235563 6.87869 0.0623978 7.17846 0.00975542 7.48371H4.09231L8.87722 3.16094Z"
+              fill="#1D252D" />
+            <path class="logo-chevron-side"
+              d="M0.52781 8.85656L7.25772 15.2038C8.32165 15.9991 9.33155 15.4981 9.70974 14.811C10.286 13.7611 9.56982 12.8234 8.83145 12.2513L4.1255 7.94081H1.83301e-06C0.0387909 8.25427 0.2078 8.56637 0.52781 8.85793V8.85656Z"
+              fill="#1D252D" />
+          </g>
+          <!-- Middle Chevron (Signal Red #D22630) -->
+          <g transform="translate(9.329, 0)">
+            <path class="logo-chevron-center"
+              d="M0.843668 14.048L11.5855 24.1706C13.2797 25.4367 14.8922 24.6387 15.4935 23.5423C16.4147 21.8682 15.2704 20.372 14.0929 19.4604L6.47917 12.4876H5.83432e-06C0.0360243 13.0201 0.304777 13.5525 0.843668 14.0467V14.048Z"
+              fill="#D22630" />
+            <path class="logo-chevron-center"
+              d="M14.1651 5.04431C15.0157 4.25997 16.4883 2.72962 15.0683 0.883064C14.2427 -0.192838 12.3392 -0.257173 11.3653 0.535381C8.57946 2.78985 0.843809 10.5306 0.843809 10.5306C0.353404 11.0015 0.0707981 11.5134 0.00845847 12.0308H6.43498L14.1665 5.04431H14.1651Z"
+              fill="#D22630" />
+          </g>
+          <!-- Right Chevron -->
+          <g transform="translate(25.368, 5.631)">
+            <path class="logo-chevron-side"
+              d="M0.917851 10.4663C0.298611 10.9454 -0.302619 11.7311 0.182244 12.6112C0.499483 13.1862 1.34176 13.6064 2.23391 12.9425L7.8791 7.62049C8.14647 7.37957 8.28223 7.1195 8.31271 6.85668H5.35504L0.917851 10.4663Z"
+              fill="#1D252D" />
+            <path class="logo-chevron-side"
+              d="M0.91237 2.78549C0.29313 2.3064 -0.308103 1.52069 0.176761 0.640533C0.489844 0.0738366 1.38199 -0.275215 2.18964 0.28053C2.21596 0.298325 2.23951 0.318858 2.26306 0.340759L7.87362 5.62992C8.14099 5.87084 8.27675 6.13092 8.30723 6.39373H5.34956L0.91237 2.78412V2.78549Z"
+              fill="#1D252D" />
+          </g>
+        </svg>
+      </a>
+
+      <!-- Location Indicator (w: ~100px, h: 48px) -->
+      <div class="header-nav-item mobile-hidden hidden sm:flex">
+        <svg class="nav-icon" width="19" height="19" viewBox="0 0 19 19" fill="none">
+          <path
+            d="M10.5116 8.97394C10.7913 8.69435 10.9311 8.35716 10.9311 7.96239C10.9311 7.56761 10.7913 7.23036 10.5116 6.95064C10.232 6.67104 9.89478 6.53125 9.5 6.53125C9.10522 6.53125 8.76804 6.67104 8.48845 6.95064C8.20873 7.23036 8.06887 7.56761 8.06887 7.96239C8.06887 8.35716 8.20873 8.69435 8.48845 8.97394C8.76804 9.25353 9.10522 9.39332 9.5 9.39332C9.89478 9.39332 10.232 9.25353 10.5116 8.97394ZM9.5 15.4482C11.0488 14.0617 12.234 12.7318 13.0556 11.4586C13.8772 10.1853 14.288 9.07012 14.288 8.113C14.288 6.66979 13.8295 5.48335 12.9125 4.55367C11.9955 3.62399 10.858 3.15915 9.5 3.15915C8.14203 3.15915 7.00453 3.62399 6.08752 4.55367C5.17051 5.48335 4.712 6.66979 4.712 8.113C4.712 9.07012 5.12281 10.1853 5.94443 11.4586C6.76605 12.7318 7.95124 14.0617 9.5 15.4482ZM9.5 17.0284C7.50764 15.302 6.01363 13.6954 5.01798 12.2085C4.02233 10.7215 3.5245 9.35631 3.5245 8.113C3.5245 6.2861 4.11541 4.80707 5.29724 3.67591C6.4792 2.54475 7.88012 1.97917 9.5 1.97917C11.1199 1.97917 12.5208 2.54475 13.7028 3.67591C14.8846 4.80707 15.4755 6.2861 15.4755 8.113C15.4755 9.35631 14.9777 10.7215 13.982 12.2085C12.9864 13.6954 11.4924 15.302 9.5 17.0284Z"
+            fill="currentColor" />
+        </svg>
+        <span class="header-nav-text">INDIA</span>
+      </div>
+
+      <!-- Phone Number Link with Copy feedback (w: ~201px, h: 48px) -->
+      <a id="phoneLink" href="tel:+919496245337" class="nav-link header-nav-item mobile-hidden hidden md:flex"
+        title="Click to copy or call +91 9496 245 337">
+        <svg class="nav-icon" width="19" height="19" viewBox="0 0 19 19" fill="none">
+          <path
+            d="M15.3902 16.2292C13.8983 16.2292 12.3995 15.8823 10.8937 15.1885C9.38811 14.4948 8.00474 13.5161 6.74361 12.2526C5.48262 10.989 4.50524 9.60556 3.81148 8.10231C3.11772 6.5992 2.77083 5.1017 2.77083 3.6098C2.77083 3.37006 2.85 3.17029 3.00833 3.01051C3.16667 2.85073 3.36458 2.77083 3.60208 2.77083H6.1841C6.384 2.77083 6.56034 2.83608 6.71314 2.96657C6.86593 3.09693 6.9631 3.25804 7.00467 3.44989L7.45849 5.77917C7.48989 5.99529 7.4833 6.181 7.4387 6.3363C7.39397 6.4916 7.31375 6.62203 7.19803 6.72758L5.36968 8.50745C5.66391 9.04631 6.00011 9.55608 6.37826 10.0368C6.75628 10.5173 7.16557 10.9763 7.60614 11.4137C8.0405 11.8481 8.5023 12.2516 8.99155 12.6241C9.4808 12.9966 10.0091 13.3432 10.5765 13.664L12.353 11.872C12.4769 11.7431 12.6269 11.6527 12.803 11.6009C12.979 11.5492 13.162 11.5365 13.3519 11.5629L15.5501 12.0106C15.75 12.0633 15.9132 12.1653 16.0396 12.3166C16.166 12.4678 16.2292 12.6393 16.2292 12.8311V15.3979C16.2292 15.6354 16.1493 15.8333 15.9895 15.9917C15.8297 16.15 15.6299 16.2292 15.3902 16.2292ZM4.80779 7.38388L6.22072 6.03191C6.24605 6.01159 6.26254 5.98368 6.2702 5.94819C6.27785 5.91269 6.2766 5.87971 6.26644 5.84923L5.92226 4.08005C5.9121 4.03955 5.89435 4.00913 5.86902 3.98881C5.84369 3.96849 5.8107 3.95833 5.77006 3.95833H4.07708C4.0466 3.95833 4.0212 3.96849 4.00089 3.98881C3.9807 4.00913 3.9706 4.03453 3.9706 4.06501C4.01111 4.60598 4.09965 5.15553 4.23621 5.71366C4.37264 6.27191 4.56317 6.82865 4.80779 7.38388ZM11.6953 14.2257C12.22 14.4703 12.7673 14.6573 13.3372 14.7868C13.9072 14.9161 14.4398 14.9929 14.935 15.0173C14.9655 15.0173 14.9909 15.0072 15.0112 14.9868C15.0315 14.9665 15.0417 14.9411 15.0417 14.9106V13.2452C15.0417 13.2045 15.0315 13.1716 15.0112 13.1462C14.9909 13.1209 14.9605 13.1031 14.9199 13.093L13.2574 12.7549C13.227 12.7448 13.2003 12.7435 13.1775 12.7512C13.1547 12.7588 13.1305 12.7753 13.1051 12.8007L11.6953 14.2257Z"
+            fill="currentColor" />
+        </svg>
+        <span class="header-nav-text phone-bold">+91 9496 245 337</span>
+      </a>
+    </div>
+
+    <!-- Right Navigation Group -->
+    <div class="header-right-group">
+      <!-- Dark/Light Mode Switcher Button (w: 48px, h: 48px) -->
+      <button id="themeToggleBtn" type="button" class="theme-toggle-btn" aria-label="Toggle theme">
+        <span id="themeIcon">
+          <!-- Moon Icon (Default Light Mode) -->
+          <svg class="theme-icon-svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path
+              d="M13.99 8.324C13.9275 9.48143 13.5311 10.596 12.8487 11.5329C12.1663 12.4699 11.2271 13.1891 10.1447 13.6037C9.06224 14.0183 7.88288 14.1104 6.74918 13.869C5.61548 13.6276 4.57597 13.063 3.75631 12.2434C2.93664 11.4239 2.37192 10.3844 2.13041 9.25074C1.8889 8.11706 1.98093 6.9377 2.39538 5.85521C2.80984 4.77272 3.52897 3.83346 4.46585 3.15096C5.40273 2.46846 6.51724 2.07194 7.67467 2.00933C7.94467 1.99467 8.086 2.316 7.94267 2.54467C7.46326 3.3117 7.25798 4.21858 7.36033 5.1173C7.46268 6.01602 7.86661 6.85352 8.50621 7.49312C9.14581 8.13272 9.98331 8.53665 10.882 8.639C11.7808 8.74135 12.6876 8.53607 13.4547 8.05667C13.684 7.91333 14.0047 8.054 13.99 8.324Z"
+              stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" />
+          </svg>
+        </span>
+      </button>
+
+      <!-- CTA Button: "BOOK A CONSULTATION" (w: 210px, h: 48px) -->
+      <a href="#book" class="header-cta-btn open-consultation-modal">
+        Book a Consultation
+      </a>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       HERO SECTION (FULLSCREEN)
+       Occupies full viewport height (min-h-screen / min-h-[100dvh]), vertically centered
+       ========================================================================= -->
+  <main>
+    <section class="hero-section border-b border-[#ced6dd] dark:border-[#242E38]">
+      <!-- Interactive Halftone Mouse-Follow Dots Canvas -->
+      <canvas id="heroDotsCanvas" class="hero-dots-canvas"></canvas>
+      <!-- Figma Ambient Radial Glow Background -->
+      <div class="hero-glow-bg"></div>
+      <!-- Subtle Tech Grid -->
+      <div class="hero-grid-pattern"></div>
+      <!-- Soft Radial Gradient Shield Underneath Hero Content for High Readability -->
+      <div class="hero-content-shield"></div>
+
+      <!-- Centered Hero Stack -->
+      <div class="hero-content">
+        <!-- Badge / Kicker: AI & Automation Partner -->
+        <div class="hero-eyebrow mb-6 md:mb-7 animate-fade-in delay-1">
+          <span class="font-mono-tag inline-block">
+            AI &amp; Automation Partner
+          </span>
+        </div>
+
+        <!-- Main Headline (Live Fluid Scaling Text) -->
+        <h1 class="headline-wrapper mb-7 md:mb-9 animate-fade-in delay-2">
+          <span class="headline-live-text">
+            Conversations into<br class="hidden sm:inline"> customers with AI that<br class="hidden sm:inline"> works
+            24/7.
+          </span>
+        </h1>
+
+        <!-- Subheadline / Body Text -->
+        <p class="hero-subheadline animate-fade-in delay-3">
+          <span class="font-normal">Limenzy builds </span>
+          <span class="font-bold">WhatsApp automation,<br class="inline sm:hidden"> AI chatbots and custom AI solutions</span><br class="inline sm:hidden">
+          <span class="font-normal"> that help businesses respond faster,<br class="inline sm:hidden"> cut costs and grow revenue.</span>
+        </p>
+
+        <!-- CTA Buttons Group (Row on desktop, Stack on mobile) -->
+        <div class="cta-buttons-row animate-fade-in delay-4">
+          <!-- Primary CTA: Free Consultation -->
+          <a href="#consultation" class="btn-primary font-mono-btn open-consultation-modal">
+            <!-- Download / Action Arrow Icon -->
+            <svg class="btn-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M8 11.3333V2" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"
+                stroke="#F2F1EE" />
+              <path d="M4 7.33333L8 11.3333L12 7.33333" stroke-width="1.33333" stroke-linecap="round"
+                stroke-linejoin="round" stroke="#F2F1EE" />
+              <path d="M12.6667 14H3.33333" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"
+                stroke="#F2F1EE" />
+            </svg>
+            <span class="btn-text">Free Consultation</span>
+          </a>
+
+          <!-- Secondary CTA: Chat on WhatsApp -->
+          <a href="https://wa.me/919496245337?text=Hello%20Limenzy%2C%20I%20would%20like%20to%20know%20more%20about%20your%20AI%20solutions."
+            target="_blank" rel="noopener noreferrer" class="btn-secondary font-mono-btn">
+            <!-- WhatsApp / Apps Grid Icon from Figma -->
+            <svg class="btn-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M2.66667 2H6C6.36819 2 6.66667 2.29848 6.66667 2.66667V6C6.66667 6.36819 6.36819 6.66667 6 6.66667H2.66667C2.29848 6.66667 2 6.36819 2 6V2.66667C2 2.29848 2.29848 2 2.66667 2Z"
+                stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" />
+              <path
+                d="M10 2H13.3333C13.7015 2 14 2.29848 14 2.66667V6C14 6.36819 13.7015 6.66667 13.3333 6.66667H10C9.63181 6.66667 9.33333 6.36819 9.33333 6V2.66667C9.33333 2.29848 9.63181 2 10 2Z"
+                stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" />
+              <path
+                d="M10 9.33333H13.3333C13.7015 9.33333 14 9.63181 14 10V13.3333C14 13.7015 13.7015 14 13.3333 14H10C9.63181 14 9.33333 13.7015 9.33333 13.3333V10C9.33333 9.63181 9.63181 9.33333 10 9.33333Z"
+                stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" />
+              <path
+                d="M2.66667 9.33333H6C6.36819 9.33333 6.66667 9.63181 6.66667 10V13.3333C6.66667 13.7015 6.36819 14 6 14H2.66667C2.29848 14 2 13.7015 2 13.3333V10C2 9.63181 2.29848 9.33333 2.66667 9.33333Z"
+                stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" />
+            </svg>
+            <span class="btn-text">Chat on WhatsApp</span>
+          </a>
+        </div>
+
+        <!-- Guarantee Note -->
+        <p
+          class="font-mono text-[11px] font-medium tracking-[1.65px] text-[#101014]/45 dark:text-[#F2F1EE]/45 uppercase text-center w-full">
+          Free 30-minute session · No obligation.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- =========================================================================
+         00. VALUE PROPOSITIONS BAR
+         ========================================================================= -->
+    <section class="section-band bg-[#eef2f5] dark:bg-[#0B0F13] border-b border-[#ced6dd] dark:border-[#242E38] overflow-hidden">
+      <!-- Desktop View (Static Evenly Distributed Bar) -->
+      <div class="site-frame-1200 hidden sm:flex flex-wrap items-center justify-around min-h-[102px] py-4 px-4 sm:px-8 gap-4 sm:gap-6">
+        <div class="val-prop-item flex items-center gap-2.5 px-3 py-2 rounded-md transition-all duration-200 hover:bg-white/60 dark:hover:bg-[#12181F]/80">
+          <img src="assets/6b570e27ddd1f0d779745258a113a41fafcefa47.svg" alt="" class="w-[18px] h-[18px] shrink-0" />
+          <span class="font-mono text-xs sm:text-[13px] font-medium tracking-[1.65px] uppercase text-[#101014]/60 dark:text-[#F2F1EE]/70 whitespace-nowrap">
+            Proven Expertise
+          </span>
+        </div>
+        <div class="val-prop-item flex items-center gap-2.5 px-3 py-2 rounded-md transition-all duration-200 hover:bg-white/60 dark:hover:bg-[#12181F]/80">
+          <img src="assets/6b570e27ddd1f0d779745258a113a41fafcefa47.svg" alt="" class="w-[18px] h-[18px] shrink-0" />
+          <span class="font-mono text-xs sm:text-[13px] font-medium tracking-[1.65px] uppercase text-[#101014]/60 dark:text-[#F2F1EE]/70 whitespace-nowrap">
+            Tailored Solutions
+          </span>
+        </div>
+        <div class="val-prop-item flex items-center gap-2.5 px-3 py-2 rounded-md transition-all duration-200 hover:bg-white/60 dark:hover:bg-[#12181F]/80">
+          <img src="assets/6b570e27ddd1f0d779745258a113a41fafcefa47.svg" alt="" class="w-[18px] h-[18px] shrink-0" />
+          <span class="font-mono text-xs sm:text-[13px] font-medium tracking-[1.65px] uppercase text-[#101014]/60 dark:text-[#F2F1EE]/70 whitespace-nowrap">
+            Cutting-Edge Technology
+          </span>
+        </div>
+        <div class="val-prop-item flex items-center gap-2.5 px-3 py-2 rounded-md transition-all duration-200 hover:bg-white/60 dark:hover:bg-[#12181F]/80">
+          <img src="assets/6b570e27ddd1f0d779745258a113a41fafcefa47.svg" alt="" class="w-[18px] h-[18px] shrink-0" />
+          <span class="font-mono text-xs sm:text-[13px] font-medium tracking-[1.65px] uppercase text-[#101014]/60 dark:text-[#F2F1EE]/70 whitespace-nowrap">
+            Client-Centric Approach
+          </span>
+        </div>
+      </div>
+
+      <!-- Mobile View (Infinite Smooth Auto-Scrolling Marquee, No Hover Effect) -->
+      <div class="sm:hidden w-full h-[64px] flex items-center overflow-hidden val-prop-marquee-container">
+        <div class="val-prop-marquee-track flex items-center gap-7 py-2">
+          <!-- Set 1 -->
+          <div class="val-prop-item val-prop-mobile-item flex items-center gap-2.5 shrink-0 px-2 select-none">
+            <img src="assets/6b570e27ddd1f0d779745258a113a41fafcefa47.svg" alt="" class="w-[16px] h-[16px] shrink-0" />
+            <span class="font-mono text-xs font-medium tracking-[1.65px] uppercase text-[#101014]/60 dark:text-[#F2F1EE]/70 whitespace-nowrap">
+              Proven Expertise
+            </span>
+          </div>
+          <div class="val-prop-item val-prop-mobile-item flex items-center gap-2.5 shrink-0 px-2 select-none">
+            <img src="assets/6b570e27ddd1f0d779745258a113a41fafcefa47.svg" alt="" class="w-[16px] h-[16px] shrink-0" />
+            <span class="font-mono text-xs font-medium tracking-[1.65px] uppercase text-[#101014]/60 dark:text-[#F2F1EE]/70 whitespace-nowrap">
+              Tailored Solutions
+            </span>
+          </div>
+          <div class="val-prop-item val-prop-mobile-item flex items-center gap-2.5 shrink-0 px-2 select-none">
+            <img src="assets/6b570e27ddd1f0d779745258a113a41fafcefa47.svg" alt="" class="w-[16px] h-[16px] shrink-0" />
+            <span class="font-mono text-xs font-medium tracking-[1.65px] uppercase text-[#101014]/60 dark:text-[#F2F1EE]/70 whitespace-nowrap">
+              Cutting-Edge Technology
+            </span>
+          </div>
+          <div class="val-prop-item val-prop-mobile-item flex items-center gap-2.5 shrink-0 px-2 select-none">
+            <img src="assets/6b570e27ddd1f0d779745258a113a41fafcefa47.svg" alt="" class="w-[16px] h-[16px] shrink-0" />
+            <span class="font-mono text-xs font-medium tracking-[1.65px] uppercase text-[#101014]/60 dark:text-[#F2F1EE]/70 whitespace-nowrap">
+              Client-Centric Approach
+            </span>
+          </div>
+
+          <!-- Set 2 (Duplicate for Seamless Infinite Loop) -->
+          <div class="val-prop-item val-prop-mobile-item flex items-center gap-2.5 shrink-0 px-2 select-none">
+            <img src="assets/6b570e27ddd1f0d779745258a113a41fafcefa47.svg" alt="" class="w-[16px] h-[16px] shrink-0" />
+            <span class="font-mono text-xs font-medium tracking-[1.65px] uppercase text-[#101014]/60 dark:text-[#F2F1EE]/70 whitespace-nowrap">
+              Proven Expertise
+            </span>
+          </div>
+          <div class="val-prop-item val-prop-mobile-item flex items-center gap-2.5 shrink-0 px-2 select-none">
+            <img src="assets/6b570e27ddd1f0d779745258a113a41fafcefa47.svg" alt="" class="w-[16px] h-[16px] shrink-0" />
+            <span class="font-mono text-xs font-medium tracking-[1.65px] uppercase text-[#101014]/60 dark:text-[#F2F1EE]/70 whitespace-nowrap">
+              Tailored Solutions
+            </span>
+          </div>
+          <div class="val-prop-item val-prop-mobile-item flex items-center gap-2.5 shrink-0 px-2 select-none">
+            <img src="assets/6b570e27ddd1f0d779745258a113a41fafcefa47.svg" alt="" class="w-[16px] h-[16px] shrink-0" />
+            <span class="font-mono text-xs font-medium tracking-[1.65px] uppercase text-[#101014]/60 dark:text-[#F2F1EE]/70 whitespace-nowrap">
+              Cutting-Edge Technology
+            </span>
+          </div>
+          <div class="val-prop-item val-prop-mobile-item flex items-center gap-2.5 shrink-0 px-2 select-none">
+            <img src="assets/6b570e27ddd1f0d779745258a113a41fafcefa47.svg" alt="" class="w-[16px] h-[16px] shrink-0" />
+            <span class="font-mono text-xs font-medium tracking-[1.65px] uppercase text-[#101014]/60 dark:text-[#F2F1EE]/70 whitespace-nowrap">
+              Client-Centric Approach
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- =========================================================================
+         00. CLIENT LOGOS MARQUEE (Continuous Infinite Auto-Scroll)
+         ========================================================================= -->
+    <section class="section-band bg-[#eef2f5] dark:bg-[#0B0F13] border-b border-[#ced6dd] dark:border-[#242E38] overflow-hidden">
+      <div class="site-frame-1200 marquee-frame h-[88px] sm:h-[136px] flex items-center overflow-hidden">
+        <div class="marquee-container w-full overflow-hidden relative">
+          <div class="marquee-track flex items-center gap-8 sm:gap-16 py-2">
+            <!-- Set 1 -->
+            <div class="marquee-item flex items-center justify-center shrink-0 w-[145px] sm:w-[190px] h-[42px] sm:h-[48px] opacity-85 hover:opacity-100 transition-opacity">
+              <img src="assets/Group 5.svg" alt="Client Logo" class="dark:hidden max-h-[33px] sm:max-h-[42px] max-w-full object-contain" />
+              <img src="assets/Group 5-1.svg" alt="Client Logo" class="hidden dark:block max-h-[33px] sm:max-h-[42px] max-w-full object-contain" />
+            </div>
+            <div class="marquee-item flex items-center justify-center shrink-0 w-[145px] sm:w-[190px] h-[42px] sm:h-[48px] opacity-85 hover:opacity-100 transition-opacity">
+              <img src="assets/Group 6.svg" alt="Client Logo" class="dark:hidden max-h-[33px] sm:max-h-[42px] max-w-full object-contain" />
+              <img src="assets/Group 6-1.svg" alt="Client Logo" class="hidden dark:block max-h-[33px] sm:max-h-[42px] max-w-full object-contain" />
+            </div>
+            <div class="marquee-item flex items-center justify-center shrink-0 w-[145px] sm:w-[190px] h-[42px] sm:h-[48px] opacity-85 hover:opacity-100 transition-opacity">
+              <img src="assets/Group 7.svg" alt="Client Logo" class="dark:hidden max-h-[33px] sm:max-h-[42px] max-w-full object-contain" />
+              <img src="assets/Group 7-1.svg" alt="Client Logo" class="hidden dark:block max-h-[33px] sm:max-h-[42px] max-w-full object-contain" />
+            </div>
+            <div class="marquee-item flex items-center justify-center shrink-0 w-[155px] sm:w-[205px] h-[42px] sm:h-[48px] opacity-85 hover:opacity-100 transition-opacity">
+              <img src="assets/Group 8.svg" alt="Client Logo" class="dark:hidden max-h-[35px] sm:max-h-[44px] max-w-full object-contain" />
+              <img src="assets/Group 8-1.svg" alt="Client Logo" class="hidden dark:block max-h-[35px] sm:max-h-[44px] max-w-full object-contain" />
+            </div>
+            <div class="marquee-item flex items-center justify-center shrink-0 w-[145px] sm:w-[190px] h-[42px] sm:h-[48px] opacity-85 hover:opacity-100 transition-opacity">
+              <img src="assets/Group 9.svg" alt="Client Logo" class="dark:hidden max-h-[33px] sm:max-h-[42px] max-w-full object-contain" />
+              <img src="assets/Group 9-1.svg" alt="Client Logo" class="hidden dark:block max-h-[33px] sm:max-h-[42px] max-w-full object-contain" />
+            </div>
+            <div class="marquee-item flex items-center justify-center shrink-0 w-[155px] sm:w-[205px] h-[42px] sm:h-[48px] opacity-85 hover:opacity-100 transition-opacity">
+              <img src="assets/Group 10.svg" alt="Client Logo" class="dark:hidden max-h-[35px] sm:max-h-[44px] max-w-full object-contain" />
+              <img src="assets/Group 10-1.svg" alt="Client Logo" class="hidden dark:block max-h-[35px] sm:max-h-[44px] max-w-full object-contain" />
+            </div>
+
+            <!-- Set 2 (Duplicate for Seamless Infinite Loop) -->
+            <div class="marquee-item flex items-center justify-center shrink-0 w-[145px] sm:w-[190px] h-[42px] sm:h-[48px] opacity-85 hover:opacity-100 transition-opacity">
+              <img src="assets/Group 5.svg" alt="Client Logo" class="dark:hidden max-h-[33px] sm:max-h-[42px] max-w-full object-contain" />
+              <img src="assets/Group 5-1.svg" alt="Client Logo" class="hidden dark:block max-h-[33px] sm:max-h-[42px] max-w-full object-contain" />
+            </div>
+            <div class="marquee-item flex items-center justify-center shrink-0 w-[145px] sm:w-[190px] h-[42px] sm:h-[48px] opacity-85 hover:opacity-100 transition-opacity">
+              <img src="assets/Group 6.svg" alt="Client Logo" class="dark:hidden max-h-[33px] sm:max-h-[42px] max-w-full object-contain" />
+              <img src="assets/Group 6-1.svg" alt="Client Logo" class="hidden dark:block max-h-[33px] sm:max-h-[42px] max-w-full object-contain" />
+            </div>
+            <div class="marquee-item flex items-center justify-center shrink-0 w-[145px] sm:w-[190px] h-[42px] sm:h-[48px] opacity-85 hover:opacity-100 transition-opacity">
+              <img src="assets/Group 7.svg" alt="Client Logo" class="dark:hidden max-h-[33px] sm:max-h-[42px] max-w-full object-contain" />
+              <img src="assets/Group 7-1.svg" alt="Client Logo" class="hidden dark:block max-h-[33px] sm:max-h-[42px] max-w-full object-contain" />
+            </div>
+            <div class="marquee-item flex items-center justify-center shrink-0 w-[155px] sm:w-[205px] h-[42px] sm:h-[48px] opacity-85 hover:opacity-100 transition-opacity">
+              <img src="assets/Group 8.svg" alt="Client Logo" class="dark:hidden max-h-[35px] sm:max-h-[44px] max-w-full object-contain" />
+              <img src="assets/Group 8-1.svg" alt="Client Logo" class="hidden dark:block max-h-[35px] sm:max-h-[44px] max-w-full object-contain" />
+            </div>
+            <div class="marquee-item flex items-center justify-center shrink-0 w-[145px] sm:w-[190px] h-[42px] sm:h-[48px] opacity-85 hover:opacity-100 transition-opacity">
+              <img src="assets/Group 9.svg" alt="Client Logo" class="dark:hidden max-h-[33px] sm:max-h-[42px] max-w-full object-contain" />
+              <img src="assets/Group 9-1.svg" alt="Client Logo" class="hidden dark:block max-h-[33px] sm:max-h-[42px] max-w-full object-contain" />
+            </div>
+            <div class="marquee-item flex items-center justify-center shrink-0 w-[155px] sm:w-[205px] h-[42px] sm:h-[48px] opacity-85 hover:opacity-100 transition-opacity">
+              <img src="assets/Group 10.svg" alt="Client Logo" class="dark:hidden max-h-[35px] sm:max-h-[44px] max-w-full object-contain" />
+              <img src="assets/Group 10-1.svg" alt="Client Logo" class="hidden dark:block max-h-[35px] sm:max-h-[44px] max-w-full object-contain" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         00. METRICS / STATS BAR
+         ========================================================================= -->
+    <section class="section-band bg-[#eef2f5] dark:bg-[#0B0F13] border-b border-[#ced6dd] dark:border-[#242E38]">
+      <div class="site-frame-1200 grid grid-cols-2 md:grid-cols-4 min-h-[385px]">
+        <!-- Col 1: 14 Years -->
+        <div class="stat-card bg-[#f3f5f7] dark:bg-[#12181F] border-r border-b md:border-b-0 border-[#ced6dd] dark:border-[#242E38] p-6 sm:p-8 flex flex-col justify-between group transition-colors duration-200 hover:bg-white dark:hover:bg-[#151D26]">
+          <div class="stat-number text-[#d22630] font-sans font-medium text-6xl sm:text-7xl lg:text-[90px] tracking-[-2.7px] leading-none">
+            14
+          </div>
+          <div class="stat-label text-[#1d252d] dark:text-[#F2F1EE] font-sans font-medium text-base sm:text-lg tracking-[0.54px] uppercase mt-6 sm:mt-12">
+            <p class="leading-[1.12] mb-0">years</p>
+            <p class="leading-[1.12]">of expertise</p>
+          </div>
+        </div>
+
+        <!-- Col 2: 50+ Experts -->
+        <div class="stat-card bg-[#fafbfb] dark:bg-[#151D26] border-r border-b md:border-b-0 border-[#ced6dd] dark:border-[#242E38] p-6 sm:p-8 flex flex-col justify-between group transition-colors duration-200 hover:bg-white dark:hover:bg-[#17202A]">
+          <div class="stat-number text-[#d22630] font-sans font-medium text-6xl sm:text-7xl lg:text-[90px] tracking-[-2.7px] leading-none">
+            50+
+          </div>
+          <div class="stat-label text-[#1d252d] dark:text-[#F2F1EE] font-sans font-medium text-base sm:text-lg tracking-[0.54px] uppercase mt-6 sm:mt-12">
+            <p class="leading-[1.12] mb-0">Experts</p>
+            <p class="leading-[1.12]">under one roof</p>
+          </div>
+        </div>
+
+        <!-- Col 3: 3K+ Projects -->
+        <div class="stat-card bg-[#f3f5f7] dark:bg-[#12181F] border-r border-[#ced6dd] dark:border-[#242E38] p-6 sm:p-8 flex flex-col justify-between group transition-colors duration-200 hover:bg-white dark:hover:bg-[#151D26]">
+          <div class="stat-number text-[#d22630] font-sans font-medium text-6xl sm:text-7xl lg:text-[90px] tracking-[-2.7px] leading-none">
+            3K+
+          </div>
+          <div class="stat-label text-[#1d252d] dark:text-[#F2F1EE] font-sans font-medium text-base sm:text-lg tracking-[0.54px] uppercase mt-6 sm:mt-12">
+            <p class="leading-[1.12] mb-0">Projects Delivered</p>
+            <p class="leading-[1.12]">Across the GLOBE</p>
+          </div>
+        </div>
+
+        <!-- Col 4: 10+ Industries -->
+        <div class="stat-card bg-[#fafbfb] dark:bg-[#151D26] p-6 sm:p-8 flex flex-col justify-between group transition-colors duration-200 hover:bg-white dark:hover:bg-[#17202A]">
+          <div class="stat-number text-[#d22630] font-sans font-medium text-6xl sm:text-7xl lg:text-[90px] tracking-[-2.7px] leading-none">
+            10+
+          </div>
+          <div class="stat-label text-[#1d252d] dark:text-[#F2F1EE] font-sans font-medium text-base sm:text-lg tracking-[0.54px] uppercase mt-6 sm:mt-12">
+            <p class="leading-[1.12] mb-0">industries</p>
+            <p class="leading-[1.12]">served</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         01. WHAT WE BUILD (Interactive Tabbed Services Showcase)
+         ========================================================================= -->
+    <section id="what-we-build" class="section-band bg-[#f6f7f9] dark:bg-[#0E1318] border-b border-[#ced6dd] dark:border-[#242E38]">
+      <div class="site-frame-1200">
+        <!-- Eyebrow Bar -->
+        <div class="border-b border-[#ced6dd] dark:border-[#242E38] h-[59px] flex items-center px-6">
+          <div class="flex items-center gap-2.5 font-mono text-sm tracking-[1.65px] uppercase">
+            <span class="text-[#d22630] font-medium">01</span>
+            <span class="text-[#101014]/40 dark:text-white/40">/</span>
+            <span class="text-[#101014]/60 dark:text-white/60 font-medium">What we build</span>
+          </div>
+        </div>
+
+        <!-- Headline -->
+        <div class="border-b border-[#ced6dd] dark:border-[#242E38] min-h-[220px] lg:h-[247px] flex items-center px-6 sm:px-14 py-8">
+          <h2 class="archivo-heading text-[#1d252d] dark:text-white text-3xl sm:text-4xl lg:text-[50px] font-[620] leading-[1.2] lg:leading-[60px] tracking-[-2.1px] max-w-[800px]">
+            End-to-end AI and automation, from idea to launch.
+          </h2>
+        </div>
+
+        <!-- Interactive 2-Column Tabs Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2">
+          <!-- Left: 6 Service Tabs -->
+          <div class="flex flex-col border-b lg:border-b-0 lg:border-r border-[#ced6dd] dark:border-[#242E38]" id="servicesTabContainer">
+            <!-- Tab 1 -->
+            <div class="service-tab-group border-b border-[#ced6dd] dark:border-[#242E38]" data-service="1">
+              <button type="button" class="service-tab-btn h-[98px] flex items-center pl-8 sm:pl-10 pr-6 py-4 text-left transition-all duration-200 hover:bg-black/[0.02] dark:hover:bg-white/[0.02]" data-service="1" onclick="openServiceTab('1')">
+                <div class="flex items-center gap-3 uppercase whitespace-nowrap">
+                  <span class="font-mono text-lg font-medium text-[#d22630] tracking-[1.65px] tab-num">1</span>
+                  <span class="font-mono text-sm text-[#101014]/40 dark:text-white/40 tracking-[1.65px]">/</span>
+                  <span class="font-sans font-semibold text-base sm:text-lg text-[#1d252d] dark:text-white tracking-tight tab-title">AI Chatbots &amp; Assistants</span>
+                </div>
+              </button>
+              <div class="service-tab-mobile-panel lg:hidden overflow-hidden">
+                <div class="service-tab-square-box relative w-full aspect-square overflow-hidden bg-[#f0f4f8] dark:bg-[#131B24]">
+                  <img src="assets/service_1_chatbots.png" alt="" class="absolute inset-0 w-full h-full object-cover dark:hidden" />
+                  <img src="assets/service_1_chatbots_dark.png" alt="" class="absolute inset-0 w-full h-full object-cover hidden dark:block" />
+                  <div class="absolute inset-0 bg-gradient-to-b from-white/70 via-transparent to-white/90 dark:from-[#131B24]/80 dark:via-transparent dark:to-[#131B24]/90 pointer-events-none"></div>
+                  <div class="relative z-10 flex items-center justify-between p-6 sm:p-8">
+                    <span class="font-mono text-sm sm:text-base font-semibold text-[#101014]/70 dark:text-white/70 tracking-[1.65px] uppercase">1</span>
+                    <span class="font-mono text-xs sm:text-sm font-semibold text-[#101014]/70 dark:text-white/70 text-right tracking-[1.65px] uppercase">AI Chatbots &amp; Assistants</span>
+                  </div>
+                  <div class="absolute bottom-0 left-0 right-0 z-10 p-6 sm:p-8">
+                    <p class="font-mono text-xs sm:text-sm font-medium text-[#101014]/80 dark:text-white/90 tracking-[1.65px] uppercase leading-relaxed">
+                      Answer, qualify and book, around the clock.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 2 -->
+            <div class="service-tab-group border-b border-[#ced6dd] dark:border-[#242E38]" data-service="2">
+              <button type="button" class="service-tab-btn h-[99px] flex items-center pl-8 sm:pl-10 pr-6 py-4 text-left transition-all duration-200 hover:bg-black/[0.02] dark:hover:bg-white/[0.02]" data-service="2" onclick="openServiceTab('2')">
+                <div class="flex items-center gap-3 uppercase whitespace-nowrap">
+                  <span class="font-mono text-lg font-medium text-[#d22630] tracking-[1.65px] tab-num">2</span>
+                  <span class="font-mono text-sm text-[#101014]/40 dark:text-white/40 tracking-[1.65px]">/</span>
+                  <span class="font-sans font-semibold text-base sm:text-lg text-[#1d252d] dark:text-white tracking-tight tab-title">WhatsApp Business Automation</span>
+                </div>
+              </button>
+              <div class="service-tab-mobile-panel lg:hidden overflow-hidden">
+                <div class="service-tab-square-box relative w-full aspect-square overflow-hidden bg-[#f0f4f8] dark:bg-[#131B24]">
+                  <img src="assets/service_2_whatsapp.png" alt="" class="absolute inset-0 w-full h-full object-cover dark:hidden" />
+                  <img src="assets/service_2_whatsapp_dark.png" alt="" class="absolute inset-0 w-full h-full object-cover hidden dark:block" />
+                  <div class="absolute inset-0 bg-gradient-to-b from-white/70 via-transparent to-white/90 dark:from-[#131B24]/80 dark:via-transparent dark:to-[#131B24]/90 pointer-events-none"></div>
+                  <div class="relative z-10 flex items-center justify-between p-6 sm:p-8">
+                    <span class="font-mono text-sm sm:text-base font-semibold text-[#101014]/70 dark:text-white/70 tracking-[1.65px] uppercase">2</span>
+                    <span class="font-mono text-xs sm:text-sm font-semibold text-[#101014]/70 dark:text-white/70 text-right tracking-[1.65px] uppercase">WhatsApp Business Automation</span>
+                  </div>
+                  <div class="absolute bottom-0 left-0 right-0 z-10 p-6 sm:p-8">
+                    <p class="font-mono text-xs sm:text-sm font-medium text-[#101014]/80 dark:text-white/90 tracking-[1.65px] uppercase leading-relaxed">
+                      Campaigns, support and sales inside WhatsApp.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 3 -->
+            <div class="service-tab-group border-b border-[#ced6dd] dark:border-[#242E38]" data-service="3">
+              <button type="button" class="service-tab-btn h-[98px] flex items-center pl-8 sm:pl-10 pr-6 py-4 text-left transition-all duration-200 hover:bg-black/[0.02] dark:hover:bg-white/[0.02]" data-service="3" onclick="openServiceTab('3')">
+                <div class="flex items-center gap-3 uppercase whitespace-nowrap">
+                  <span class="font-mono text-lg font-medium text-[#d22630] tracking-[1.65px] tab-num">3</span>
+                  <span class="font-mono text-sm text-[#101014]/40 dark:text-white/40 tracking-[1.65px]">/</span>
+                  <span class="font-sans font-semibold text-base sm:text-lg text-[#1d252d] dark:text-white tracking-tight tab-title">Custom AI Solutions</span>
+                </div>
+              </button>
+              <div class="service-tab-mobile-panel lg:hidden overflow-hidden">
+                <div class="service-tab-square-box relative w-full aspect-square overflow-hidden bg-[#f0f4f8] dark:bg-[#131B24]">
+                  <img src="assets/service_3_custom_ai.png" alt="" class="absolute inset-0 w-full h-full object-cover dark:hidden" />
+                  <img src="assets/service_3_custom_ai_dark.png" alt="" class="absolute inset-0 w-full h-full object-cover hidden dark:block" />
+                  <div class="absolute inset-0 bg-gradient-to-b from-white/70 via-transparent to-white/90 dark:from-[#131B24]/80 dark:via-transparent dark:to-[#131B24]/90 pointer-events-none"></div>
+                  <div class="relative z-10 flex items-center justify-between p-6 sm:p-8">
+                    <span class="font-mono text-sm sm:text-base font-semibold text-[#101014]/70 dark:text-white/70 tracking-[1.65px] uppercase">3</span>
+                    <span class="font-mono text-xs sm:text-sm font-semibold text-[#101014]/70 dark:text-white/70 text-right tracking-[1.65px] uppercase">Custom AI Solutions</span>
+                  </div>
+                  <div class="absolute bottom-0 left-0 right-0 z-10 p-6 sm:p-8">
+                    <p class="font-mono text-xs sm:text-sm font-medium text-[#101014]/80 dark:text-white/90 tracking-[1.65px] uppercase leading-relaxed">
+                      Models and tools built around your data and workflows.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 4 (Default Active in Figma) -->
+            <div class="service-tab-group is-active border-b border-[#ced6dd] dark:border-[#242E38]" data-service="4">
+              <button type="button" class="service-tab-btn is-active h-[98px] flex items-center pl-8 sm:pl-10 pr-6 py-4 text-left transition-all duration-200 hover:bg-black/[0.02] dark:hover:bg-white/[0.02]" data-service="4" onclick="openServiceTab('4')">
+                <div class="flex items-center gap-3 uppercase whitespace-nowrap">
+                  <span class="font-mono text-lg font-medium text-[#d22630] tracking-[1.65px] tab-num">4</span>
+                  <span class="font-mono text-sm text-[#101014]/40 dark:text-white/40 tracking-[1.65px]">/</span>
+                  <span class="font-sans font-semibold text-base sm:text-lg text-[#1d252d] dark:text-white tracking-tight tab-title">Web &amp; Mobile App Development</span>
+                </div>
+              </button>
+              <div class="service-tab-mobile-panel lg:hidden overflow-hidden">
+                <div class="service-tab-square-box relative w-full aspect-square overflow-hidden bg-[#f0f4f8] dark:bg-[#131B24]">
+                  <img src="assets/service_4_web_mobile.png" alt="" class="absolute inset-0 w-full h-full object-cover dark:hidden" />
+                  <img src="assets/service_4_web_mobile_dark.png" alt="" class="absolute inset-0 w-full h-full object-cover hidden dark:block" />
+                  <div class="absolute inset-0 bg-gradient-to-b from-white/70 via-transparent to-white/90 dark:from-[#131B24]/80 dark:via-transparent dark:to-[#131B24]/90 pointer-events-none"></div>
+                  <div class="relative z-10 flex items-center justify-between p-6 sm:p-8">
+                    <span class="font-mono text-sm sm:text-base font-semibold text-[#101014]/70 dark:text-white/70 tracking-[1.65px] uppercase">4</span>
+                    <span class="font-mono text-xs sm:text-sm font-semibold text-[#101014]/70 dark:text-white/70 text-right tracking-[1.65px] uppercase">Web &amp; Mobile App Development</span>
+                  </div>
+                  <div class="absolute bottom-0 left-0 right-0 z-10 p-6 sm:p-8">
+                    <p class="font-mono text-xs sm:text-sm font-medium text-[#101014]/80 dark:text-white/90 tracking-[1.65px] uppercase leading-relaxed">
+                      Fast, scalable products your customers enjoy.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 5 -->
+            <div class="service-tab-group border-b border-[#ced6dd] dark:border-[#242E38]" data-service="5">
+              <button type="button" class="service-tab-btn h-[98px] flex items-center pl-8 sm:pl-10 pr-6 py-4 text-left transition-all duration-200 hover:bg-black/[0.02] dark:hover:bg-white/[0.02]" data-service="5" onclick="openServiceTab('5')">
+                <div class="flex items-center gap-3 uppercase whitespace-nowrap">
+                  <span class="font-mono text-lg font-medium text-[#d22630] tracking-[1.65px] tab-num">5</span>
+                  <span class="font-mono text-sm text-[#101014]/40 dark:text-white/40 tracking-[1.65px]">/</span>
+                  <span class="font-sans font-semibold text-base sm:text-lg text-[#1d252d] dark:text-white tracking-tight tab-title">Workflow &amp; Process Automation</span>
+                </div>
+              </button>
+              <div class="service-tab-mobile-panel lg:hidden overflow-hidden">
+                <div class="service-tab-square-box relative w-full aspect-square overflow-hidden bg-[#f0f4f8] dark:bg-[#131B24]">
+                  <img src="assets/service_5_workflow.png" alt="" class="absolute inset-0 w-full h-full object-cover dark:hidden" />
+                  <img src="assets/service_5_workflow_dark.png" alt="" class="absolute inset-0 w-full h-full object-cover hidden dark:block" />
+                  <div class="absolute inset-0 bg-gradient-to-b from-white/70 via-transparent to-white/90 dark:from-[#131B24]/80 dark:via-transparent dark:to-[#131B24]/90 pointer-events-none"></div>
+                  <div class="relative z-10 flex items-center justify-between p-6 sm:p-8">
+                    <span class="font-mono text-sm sm:text-base font-semibold text-[#101014]/70 dark:text-white/70 tracking-[1.65px] uppercase">5</span>
+                    <span class="font-mono text-xs sm:text-sm font-semibold text-[#101014]/70 dark:text-white/70 text-right tracking-[1.65px] uppercase">Workflow &amp; Process Automation</span>
+                  </div>
+                  <div class="absolute bottom-0 left-0 right-0 z-10 p-6 sm:p-8">
+                    <p class="font-mono text-xs sm:text-sm font-medium text-[#101014]/80 dark:text-white/90 tracking-[1.65px] uppercase leading-relaxed">
+                      Remove repetitive tasks across your teams.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 6 -->
+            <div class="service-tab-group" data-service="6">
+              <button type="button" class="service-tab-btn h-[97px] flex items-center pl-8 sm:pl-10 pr-6 py-4 text-left transition-all duration-200 hover:bg-black/[0.02] dark:hover:bg-white/[0.02]" data-service="6" onclick="openServiceTab('6')">
+                <div class="flex items-center gap-3 uppercase whitespace-nowrap">
+                  <span class="font-mono text-lg font-medium text-[#d22630] tracking-[1.65px] tab-num">6</span>
+                  <span class="font-mono text-sm text-[#101014]/40 dark:text-white/40 tracking-[1.65px]">/</span>
+                  <span class="font-sans font-semibold text-base sm:text-lg text-[#1d252d] dark:text-white tracking-tight tab-title">AI Consulting &amp; Integration</span>
+                </div>
+              </button>
+              <div class="service-tab-mobile-panel lg:hidden overflow-hidden">
+                <div class="service-tab-square-box relative w-full aspect-square overflow-hidden bg-[#f0f4f8] dark:bg-[#131B24]">
+                  <img src="assets/service_6_consulting.png" alt="" class="absolute inset-0 w-full h-full object-cover dark:hidden" />
+                  <img src="assets/service_6_consulting_dark.png" alt="" class="absolute inset-0 w-full h-full object-cover hidden dark:block" />
+                  <div class="absolute inset-0 bg-gradient-to-b from-white/70 via-transparent to-white/90 dark:from-[#131B24]/80 dark:via-transparent dark:to-[#131B24]/90 pointer-events-none"></div>
+                  <div class="relative z-10 flex items-center justify-between p-6 sm:p-8">
+                    <span class="font-mono text-sm sm:text-base font-semibold text-[#101014]/70 dark:text-white/70 tracking-[1.65px] uppercase">6</span>
+                    <span class="font-mono text-xs sm:text-sm font-semibold text-[#101014]/70 dark:text-white/70 text-right tracking-[1.65px] uppercase">AI Consulting &amp; Integration</span>
+                  </div>
+                  <div class="absolute bottom-0 left-0 right-0 z-10 p-6 sm:p-8">
+                    <p class="font-mono text-xs sm:text-sm font-medium text-[#101014]/80 dark:text-white/90 tracking-[1.65px] uppercase leading-relaxed">
+                      Connect AI to your CRM, ERP and existing systems.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Dynamic Service Showcase Display Card (Desktop only) -->
+          <div class="hidden lg:flex relative min-h-[480px] lg:h-[589px] p-8 sm:p-10 flex-col justify-between overflow-hidden bg-cover bg-center" id="serviceDisplayCard">
+            <!-- Background Graphic -->
+            <div class="absolute inset-0 pointer-events-none overflow-hidden opacity-90">
+              <img src="assets/service_4_web_mobile.png" alt="" class="w-full h-full object-cover scale-110 filter dark:hidden" id="serviceDisplayGraphic" />
+              <img src="assets/service_4_web_mobile_dark.png" alt="" class="w-full h-full object-cover scale-110 filter hidden dark:block" id="serviceDisplayGraphicDark" />
+            </div>
+
+            <!-- Top Row: Number & Title -->
+            <div class="relative z-10 flex items-center justify-between">
+              <span class="font-mono text-base font-normal text-[#101014]/60 dark:text-white/60 tracking-[1.65px] uppercase" id="serviceDisplayNum">
+                4
+              </span>
+              <span class="font-mono text-sm sm:text-base font-normal text-[#101014]/60 dark:text-white/60 text-right tracking-[1.65px] uppercase" id="serviceDisplayTitle">
+                Web &amp; Mobile App Development
+              </span>
+            </div>
+
+            <!-- Bottom Row: Subtitle / Impact -->
+            <div class="relative z-10">
+              <p class="font-mono text-sm sm:text-base font-medium text-[#101014]/70 dark:text-white/80 tracking-[1.65px] uppercase leading-relaxed" id="serviceDisplayDesc">
+                Fast, scalable products your customers enjoy.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Banner 1: Not sure what you need? Talk to an expert. (Component 1) -->
+        <div class="cta-banner-btn cta-banner-expert bg-[#1d252d] h-[105px] relative overflow-hidden flex items-center pl-[24px] pr-[20px] sm:pl-[37px] sm:pr-[34px] cursor-pointer group select-none" onclick="openConsultationModal()">
+          <!-- Smooth Red Sweep Background -->
+          <div class="cta-sweep-bg bg-[#d22630] absolute inset-0 pointer-events-none"></div>
+
+          <!-- Expanding Inner Row (from 532px to 100%) -->
+          <div class="cta-row cta-row-532 relative z-10 w-full flex items-center justify-between">
+            <p class="font-mono text-xs sm:text-base tracking-[1.65px] uppercase text-white/70 sm:text-white/50 pr-4 leading-tight sm:leading-normal">
+              <span>Not sure what you need?</span>
+              <span class="block sm:inline font-medium text-white transition-colors duration-300 group-hover:text-[#eef2f5] mt-1 sm:mt-0">Talk to an expert.</span>
+            </p>
+
+            <div class="cta-icon-box w-[42px] h-[41px] bg-[#eef2f5] rounded flex items-center justify-center shrink-0 shadow-sm relative overflow-hidden">
+              <img src="assets/f54f5b9bd1123cee6a116cb4fab8b94bd6797d5d.svg" alt="" class="cta-icon-default absolute w-6 h-6" />
+              <img src="assets/6ee1927149d47d923d5b183b9ca6a2f2eeb82c20.svg" alt="" class="cta-icon-hover absolute w-6 h-6" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         02. FEATURED PRODUCTS (WhatsApp Automation & AI Chatbot)
+         ========================================================================= -->
+    <section id="featured-products" class="section-band bg-[#eef2f5] dark:bg-[#0B0F13] border-b border-[#ced6dd] dark:border-[#242E38]">
+      <div class="site-frame-1200">
+        <!-- Eyebrow Bar -->
+        <div class="border-b border-[#ced6dd] dark:border-[#242E38] h-[59px] flex items-center px-6">
+          <div class="flex items-center gap-2.5 font-mono text-sm tracking-[1.65px] uppercase">
+            <span class="text-[#d22630] font-medium">02</span>
+            <span class="text-[#101014]/40 dark:text-white/40">/</span>
+            <span class="text-[#101014]/60 dark:text-white/60 font-medium">Featured Products</span>
+          </div>
+        </div>
+
+        <!-- Headline -->
+        <div class="border-b border-[#ced6dd] dark:border-[#242E38] min-h-[220px] lg:h-[247px] flex items-center px-6 sm:px-14 py-8">
+          <h2 class="archivo-heading text-[#1d252d] dark:text-white text-3xl sm:text-4xl lg:text-[50px] font-[620] leading-[1.2] lg:leading-[60px] tracking-[-2.1px] max-w-[850px]">
+            Ready-to-deploy products, launched in weeks, not months.
+          </h2>
+        </div>
+
+        <!-- Product Cards Showcase (2 Columns) -->
+        <div class="grid grid-cols-1 lg:grid-cols-2">
+          <!-- Product Card 1: WhatsApp Automation -->
+          <div class="product-card bg-[#fafbfb] dark:bg-[#12181F] border-b lg:border-b-0 lg:border-r border-[#ced6dd] dark:border-[#242E38] flex flex-col justify-between overflow-hidden relative">
+            <!-- 579px Content Area matching Figma node 1829:211 -->
+            <div class="relative w-full h-[520px] sm:h-[579px] overflow-hidden">
+              <h3 class="font-sans text-2xl sm:text-[32px] font-extrabold text-[#1d252d] dark:text-white leading-[30px] sm:leading-[36px] absolute left-6 sm:left-[58.63px] top-8 sm:top-[57.08px] max-w-[470px] z-10">
+                WhatsApp Automation <span class="block sm:inline font-normal text-[#1d252d]/70 dark:text-white/70">Platform</span>
+              </h3>
+              <p class="font-sans text-base sm:text-[18px] font-normal text-[#1d252d]/80 dark:text-[#F2F1EE]/80 leading-[22px] absolute left-6 sm:left-[58.63px] top-[102px] sm:top-[155.93px] max-w-[310px] z-10">
+                Sell and support where your customers already are.
+              </p>
+
+              <!-- Exact Figma Image: converse-one-webp-new 1 (left: -84.53px, top: 149.02px, w: 756.56px, h: 668.35px) -->
+              <div class="absolute left-[-35px] sm:left-[-84.53px] top-[115px] sm:top-[149.02px] w-[700px] sm:w-[756.56px] h-[618px] sm:h-[668.35px] pointer-events-none">
+                <img src="assets/5abbbf24b6b122af14909e28232359dc7b05b06a.png" alt="WhatsApp Automation Platform" class="w-full h-full object-cover" />
+              </div>
+            </div>
+
+            <!-- Product Bottom Action Button (Component 7) -->
+            <div class="cta-banner-btn cta-banner-whatsapp bg-[#1d252d] h-[105px] border-t border-[#ced6dd] dark:border-[#242E38] relative overflow-hidden flex items-center pl-[24px] pr-[20px] sm:pl-[37px] sm:pr-[34px] cursor-pointer group select-none shrink-0" onclick="openConsultationModal()">
+              <!-- Smooth Green Sweep Background -->
+              <div class="cta-sweep-bg bg-[#065e55] absolute inset-0 pointer-events-none"></div>
+
+              <!-- Expanding Inner Row (from 249px to 100%) -->
+              <div class="cta-row cta-row-249 relative z-10 w-full flex items-center justify-between">
+                <span class="font-mono text-sm sm:text-base tracking-[1.65px] uppercase text-[#eef2f5] whitespace-nowrap pr-4">
+                  SEE it in action!
+                </span>
+                <div class="cta-icon-box w-[42px] h-[41px] bg-[#eef2f5] rounded flex items-center justify-center shrink-0 shadow-sm relative overflow-hidden">
+                  <img src="assets/f54f5b9bd1123cee6a116cb4fab8b94bd6797d5d.svg" alt="" class="cta-icon-default absolute w-6 h-6" />
+                  <img src="assets/icon_arrow_green.svg" alt="" class="cta-icon-hover absolute w-6 h-6" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 2: AI Chatbot -->
+          <div class="product-card bg-[#fafbfb] dark:bg-[#12181F] flex flex-col justify-between overflow-hidden relative">
+            <!-- 579px Content Area matching Figma node 1829:214 -->
+            <div class="relative w-full h-[520px] sm:h-[579px] overflow-hidden">
+              <h3 class="font-sans text-2xl sm:text-[32px] font-extrabold text-[#1d252d] dark:text-white leading-[30px] sm:leading-[36px] absolute left-6 sm:left-[58.63px] top-8 sm:top-[57.08px] max-w-[470px] z-10">
+                AI Chatbot
+              </h3>
+              <p class="font-sans text-base sm:text-[18px] font-normal text-[#1d252d]/80 dark:text-[#F2F1EE]/80 leading-[22px] absolute left-6 sm:left-[58.63px] top-[72px] sm:top-[127.16px] max-w-[260px] z-10">
+                An AI assistant that knows your business.
+              </p>
+
+              <!-- Exact Figma Image: image 2 (left: 17.05px, top: 171.16px, w: 699.14px, h: 524.36px) -->
+              <div class="absolute left-[-10px] sm:left-[17.05px] top-[125px] sm:top-[171.16px] w-[660px] sm:w-[699.14px] h-[495px] sm:h-[524.36px] pointer-events-none">
+                <img src="assets/bf5210aacadee36a6bb7c9db3a26442dd274fefb.png" alt="AI Chatbot Interface" class="w-full h-full object-cover" />
+              </div>
+            </div>
+
+            <!-- Product Bottom Action Button (Component 8) -->
+            <div class="cta-banner-btn cta-banner-chatbot bg-[#1d252d] h-[105px] border-t border-[#ced6dd] dark:border-[#242E38] relative overflow-hidden flex items-center pl-[24px] pr-[20px] sm:pl-[37px] sm:pr-[34px] cursor-pointer group select-none shrink-0" onclick="openConsultationModal()">
+              <!-- Smooth Blue Sweep Background -->
+              <div class="cta-sweep-bg bg-[#1b609c] absolute inset-0 pointer-events-none"></div>
+
+              <!-- Expanding Inner Row (from 233px to 100%) -->
+              <div class="cta-row cta-row-233 relative z-10 w-full flex items-center justify-between">
+                <span class="font-mono text-sm sm:text-base tracking-[1.65px] uppercase text-[#eef2f5] whitespace-nowrap pr-4">
+                  ASK FOR A DEMO!
+                </span>
+                <div class="cta-icon-box w-[42px] h-[41px] bg-[#eef2f5] rounded flex items-center justify-center shrink-0 shadow-sm relative overflow-hidden">
+                  <img src="assets/f54f5b9bd1123cee6a116cb4fab8b94bd6797d5d.svg" alt="" class="cta-icon-default absolute w-6 h-6" />
+                  <img src="assets/icon_arrow_blue.svg" alt="" class="cta-icon-hover absolute w-6 h-6" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- =========================================================================
+         03. CASE STUDY (Eduwizz)
+         ========================================================================= -->
+    <section id="case-study" class="section-band bg-[#f6f7f9] dark:bg-[#0E1318] border-b border-[#ced6dd] dark:border-[#242E38]">
+      <div class="site-frame-1200">
+        
+        <!-- TOP CARD: Eduwizz Project Showcase (Height 663px on desktop) -->
+        <div class="bg-white dark:bg-[#12181F] border-b border-[#ced6dd] dark:border-[#242E38] min-h-[auto] lg:min-h-[663px] relative overflow-hidden flex flex-col lg:block">
+          <!-- Eyebrow Bar (03 / CASE STUDY) -->
+          <div class="border-b border-[#ced6dd] dark:border-[#242E38] h-[59px] flex items-center px-6 sm:px-[25px] relative z-10 shrink-0">
+            <div class="flex items-center gap-2.5 font-mono text-sm tracking-[1.65px] uppercase">
+              <span class="text-[#d22630] font-medium">03</span>
+              <span class="text-[#101014]/40 dark:text-white/40">/</span>
+              <span class="text-[#101014]/60 dark:text-white/60 font-medium">CASE STUDY</span>
+            </div>
+          </div>
+
+          <!-- Dual Phone Mockups Image (Exact user asset: assets/case_study_mockup.png) -->
+          <!-- On mobile: appears first right after eyebrow bar flush to the line; On desktop: lg:absolute lg:right-[-30px] lg:top-0 -->
+          <div class="lg:absolute lg:right-[-30px] lg:top-0 lg:w-[800px] lg:h-[672px] overflow-visible pointer-events-none z-30 flex items-center justify-center lg:block pt-0 pb-2 lg:pb-0 -mt-[1px] lg:mt-0 px-4 lg:px-0">
+            <img src="assets/case_study_mockup.png" alt="Eduwizz App Phone Mockups" class="w-full max-w-[480px] sm:max-w-[520px] lg:max-w-none lg:w-[800px] lg:h-auto object-contain drop-shadow-2xl" />
+          </div>
+
+          <!-- Main Content Area: Left Column (Desktop 62px from left, 68px from eyebrow bar) -->
+          <div class="relative z-40 pt-4 sm:pt-6 lg:pt-[68px] pb-12 px-6 lg:pl-[62px] lg:pr-0 max-w-full lg:max-w-[540px] flex flex-col justify-between min-h-[auto] lg:min-h-[604px]">
+            <div>
+              <!-- Brand Title: Eduwizz with Purple Gradient -->
+              <h3 class="archivo-heading text-[52px] sm:text-[60px] font-[620] tracking-[-2.1px] leading-[60px] select-none" style="background-image: linear-gradient(92.2deg, rgb(212, 90, 245) 0.3%, rgb(166, 112, 243) 49%); -webkit-background-clip: text; color: transparent; font-variation-settings: 'wdth' 118;">
+                Eduwizz
+              </h3>
+
+              <!-- Subtitle -->
+              <p class="font-sans text-xl sm:text-[24px] text-[#1d252d] dark:text-white mt-5 max-w-[420px] leading-[32px] tracking-[-0.48px]">
+                An <strong class="font-bold">Online Learning App</strong> tailored for healthcare professionals
+              </p>
+
+              <!-- Features List with Purple Sparkle Stars Aligned to Each Row -->
+              <div class="flex flex-col gap-5 sm:gap-[26px] mt-8 lg:mt-12 font-sans text-base sm:text-[20px] tracking-[-0.4px] text-[#1d252d] dark:text-white">
+                <div class="flex items-center gap-3.5">
+                  <svg width="22" height="22" class="case-study-star w-[22px] h-[22px] shrink-0" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.0415 0L14.0237 8.0593L22.083 11.0415L14.0237 14.0237L11.0415 22.083L8.0593 14.0237L0 11.0415L8.0593 8.0593L11.0415 0Z" fill="url(#star_grad_purple)"/>
+                    <defs>
+                      <linearGradient id="star_grad_purple" x1="0" y1="11.0415" x2="11" y2="11.1" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#D45AF5"/>
+                        <stop offset="1" stop-color="#A670F3"/>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  <p class="font-bold leading-none whitespace-nowrap">
+                    AI Enable Learning <span class="font-normal text-[#1d252d] dark:text-white">Experience</span>
+                  </p>
+                </div>
+
+                <div class="flex items-center gap-3.5">
+                  <svg width="22" height="22" class="case-study-star w-[22px] h-[22px] shrink-0" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.0415 0L14.0237 8.0593L22.083 11.0415L14.0237 14.0237L11.0415 22.083L8.0593 14.0237L0 11.0415L8.0593 8.0593L11.0415 0Z" fill="url(#star_grad_purple)"/>
+                  </svg>
+                  <p class="font-bold leading-none whitespace-nowrap">
+                    Seamless Video Streaming <span class="font-normal text-[#1d252d] dark:text-white">Across Devices</span>
+                  </p>
+                </div>
+
+                <div class="flex items-center gap-3.5">
+                  <svg width="22" height="22" class="case-study-star w-[22px] h-[22px] shrink-0" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.0415 0L14.0237 8.0593L22.083 11.0415L14.0237 14.0237L11.0415 22.083L8.0593 14.0237L0 11.0415L8.0593 8.0593L11.0415 0Z" fill="url(#star_grad_purple)"/>
+                  </svg>
+                  <p class="font-bold leading-none whitespace-nowrap">
+                    Scalability for <span class="font-normal text-[#1d252d] dark:text-white">Concurrent Users</span>
+                  </p>
+                </div>
+
+                <div class="flex items-center gap-3.5">
+                  <svg width="22" height="22" class="case-study-star w-[22px] h-[22px] shrink-0" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.0415 0L14.0237 8.0593L22.083 11.0415L14.0237 14.0237L11.0415 22.083L8.0593 14.0237L0 11.0415L8.0593 8.0593L11.0415 0Z" fill="url(#star_grad_purple)"/>
+                  </svg>
+                  <p class="font-bold leading-none whitespace-nowrap">
+                    Cross-Platform <span class="font-normal text-[#1d252d] dark:text-white">Consistency</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- VIEW FULL CASE STUDY Action Button (Matching Figma node 1842:471) -->
+            <div class="mt-10 lg:mt-14">
+              <button type="button" class="btn-case-study group flex items-center justify-between w-[287px] h-[41px] cursor-pointer select-none" onclick="openConsultationModal()">
+                <span class="font-mono text-[16px] tracking-[1.65px] uppercase text-[#1d252d] dark:text-white font-normal group-hover:text-[#a670f3] transition-colors duration-200">
+                  VIEW FULL CASE STUDY
+                </span>
+                <div class="cta-icon-box w-[42px] h-[41px] bg-[#eef2f5] dark:bg-[#1E2630] rounded flex items-center justify-center shrink-0 relative overflow-hidden group-hover:bg-[#a670f3]/15 transition-colors duration-300">
+                  <img src="assets/f54f5b9bd1123cee6a116cb4fab8b94bd6797d5d.svg" alt="" class="cta-icon-default absolute w-6 h-6" />
+                  <img src="assets/icon_arrow_purple.svg" alt="" class="cta-icon-hover absolute w-6 h-6" />
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- BOTTOM CARD: Large Quote & CEO Attestation (Height 462px on desktop) -->
+        <div class="bg-white dark:bg-[#12181F] border-b border-[#ced6dd] dark:border-[#242E38] min-h-[auto] lg:min-h-[462px] p-8 sm:p-12 lg:p-0 relative overflow-hidden flex flex-col justify-between">
+          <!-- Big Watermark Quote SVG in Top-Right (hidden on mobile, visible on desktop) -->
+          <div class="hidden lg:flex lg:absolute lg:left-[786px] lg:top-0 w-[240px] sm:w-[340px] h-[250px] pointer-events-none rotate-180 items-center justify-center self-end lg:self-auto dark:opacity-20">
+            <img src="assets/be7063e0a072ec25355583e4fbcc1aebc069b5ce.svg" alt="" class="w-full h-full object-contain" />
+          </div>
+
+          <!-- The Quote (left 62px, top 68px, width 688px on desktop) -->
+          <div class="relative z-10 lg:absolute lg:left-[62px] lg:top-[68px] lg:w-[688px]">
+            <h4 class="case-study-quote font-sans lg:archivo-heading text-[#1d252d] dark:text-white text-2xl sm:text-3xl lg:text-[40px] font-semibold lg:font-[620] leading-snug lg:leading-[50px] tracking-tight lg:tracking-[-2.1px]">
+              “An Online Learning App tailored for healthcare professionals An Online Learning App tailored for healthcare professionals”
+            </h4>
+          </div>
+
+          <!-- Author Box (left 62px, top 352px on desktop) -->
+          <div class="relative z-10 mt-10 lg:mt-0 lg:absolute lg:left-[62px] lg:top-[352px] lg:w-[569px]">
+            <p class="font-sans font-bold text-2xl text-[#1d252d] dark:text-white leading-[30px]">
+              John Doe
+            </p>
+            <p class="font-sans font-normal text-xl text-[#1d252d] dark:text-white/70 leading-[30px]">
+              CEO of Eduwizz
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         04. TESTIMONIALS (Interactive Carousel)
+         ========================================================================= -->
+    <section id="testimonials" class="section-band bg-[#eef2f5] dark:bg-[#0B0F13] border-b border-[#ced6dd] dark:border-[#242E38]">
+      <div class="site-frame-1200">
+        <!-- Eyebrow Bar -->
+        <div class="border-b border-[#ced6dd] dark:border-[#242E38] h-[59px] flex items-center px-6">
+          <div class="flex items-center gap-2.5 font-mono text-sm tracking-[1.65px] uppercase">
+            <span class="text-[#d22630] font-medium">04</span>
+            <span class="text-[#101014]/40 dark:text-white/40">/</span>
+            <span class="text-[#101014]/60 dark:text-white/60 font-medium">Testimonials</span>
+          </div>
+        </div>
+
+        <!-- Headline & Carousel Navigation Controls -->
+        <div class="border-b border-[#ced6dd] dark:border-[#242E38] min-h-[auto] sm:min-h-[140px] flex flex-col sm:flex-row items-start sm:items-center justify-between px-6 sm:px-14 py-6 gap-4">
+          <h2 class="archivo-heading text-[#1d252d] dark:text-white text-3xl sm:text-4xl lg:text-[50px] font-[620] leading-[1.2] lg:leading-[60px] tracking-[-2.1px]">
+            What our clients say
+          </h2>
+
+          <!-- Prev / Next Controls (Desktop/Tablet Only) -->
+          <div class="hidden sm:flex items-center shadow-sm">
+            <button type="button" class="prev-testimonial-btn bg-[#1d252d] hover:bg-[#2b3743] w-[46px] h-[45px] flex items-center justify-center border-r border-[#cdd6dd]/30 transition-colors cursor-pointer" onclick="navigateTestimonial(-1)" aria-label="Previous testimonial">
+              <img src="assets/d5cfb9bee39ca86d20e57e4115b091eb704745f8.svg" alt="" class="w-[18px] h-[18px] testimonial-arrow-left" />
+            </button>
+            <button type="button" class="next-testimonial-btn bg-[#1d252d] hover:bg-[#2b3743] w-[46px] h-[45px] flex items-center justify-center transition-colors cursor-pointer" onclick="navigateTestimonial(1)" aria-label="Next testimonial">
+              <img src="assets/d5cfb9bee39ca86d20e57e4115b091eb704745f8.svg" alt="" class="w-[18px] h-[18px] testimonial-arrow-right" />
+            </button>
+          </div>
+        </div>
+
+        <!-- Testimonial Slider Card (Grid 2 Cols) -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 min-h-[416px] relative overflow-hidden" id="testimonialSliderCard">
+          <!-- Left: Quote & Author -->
+          <div class="p-8 sm:p-14 flex flex-col justify-between relative">
+            <p class="font-sans font-semibold text-2xl sm:text-3xl lg:text-[34px] leading-snug tracking-[-0.72px] text-[#1d252d] dark:text-white relative z-10 transition-opacity duration-300" id="testimonialQuote">
+              “Great work, Consistent and good quality. Great support anytime and always professional.”
+            </p>
+
+            <!-- Author Info & Mobile Controls Row -->
+            <div class="mt-8 relative z-10 flex items-center justify-between gap-4" id="testimonialAuthorRow">
+              <div class="transition-opacity duration-300" id="testimonialAuthorBox">
+                <p class="font-sans font-bold text-xl sm:text-2xl text-[#1d252d] dark:text-white" id="testimonialAuthorName">Nafsudheen</p>
+                <p class="font-sans font-normal text-base sm:text-lg text-[#1d252d]/70 dark:text-white/70" id="testimonialAuthorRole">CEO of XYZ</p>
+              </div>
+
+              <!-- Prev / Next Controls (Mobile Only: aligned to the right of name and company) -->
+              <div class="flex sm:hidden items-center shadow-sm shrink-0">
+                <button type="button" class="prev-testimonial-btn bg-[#1d252d] hover:bg-[#2b3743] w-[44px] h-[44px] flex items-center justify-center border-r border-[#cdd6dd]/30 transition-colors cursor-pointer" onclick="navigateTestimonial(-1)" aria-label="Previous testimonial">
+                  <img src="assets/d5cfb9bee39ca86d20e57e4115b091eb704745f8.svg" alt="" class="w-[18px] h-[18px] testimonial-arrow-left" />
+                </button>
+                <button type="button" class="next-testimonial-btn bg-[#1d252d] hover:bg-[#2b3743] w-[44px] h-[44px] flex items-center justify-center transition-colors cursor-pointer" onclick="navigateTestimonial(1)" aria-label="Next testimonial">
+                  <img src="assets/d5cfb9bee39ca86d20e57e4115b091eb704745f8.svg" alt="" class="w-[18px] h-[18px] testimonial-arrow-right" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Client / Visual Showcase Image -->
+          <div class="relative min-h-[300px] lg:min-h-full overflow-hidden bg-cover bg-center">
+            <img src="assets/41c3aa49b28bc505dd548d707d118c1781acb77f.png" alt="" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300" id="testimonialPhoto" />
+            <div class="absolute left-8 bottom-8 w-[45px] h-[45px] rounded-full shadow-lg">
+              <img src="assets/d2d2d74cfd2c9b66228a1e255b1fd8fa449bcda4.svg" alt="" class="w-full h-full object-contain" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         05. FAQS (Interactive Accordion Grid)
+         ========================================================================= -->
+    <section id="faqs" class="section-band bg-[#f6f7f9] dark:bg-[#0E1318] border-b border-[#ced6dd] dark:border-[#242E38]">
+      <div class="site-frame-1200">
+        <!-- Eyebrow Bar -->
+        <div class="border-b border-[#ced6dd] dark:border-[#242E38] h-[59px] flex items-center px-6">
+          <div class="flex items-center gap-2.5 font-mono text-sm tracking-[1.65px] uppercase">
+            <span class="text-[#d22630] font-medium">05</span>
+            <span class="text-[#101014]/40 dark:text-white/40">/</span>
+            <span class="text-[#101014]/60 dark:text-white/60 font-medium">FAQs</span>
+          </div>
+        </div>
+
+        <!-- Headline -->
+        <div class="border-b border-[#ced6dd] dark:border-[#242E38] min-h-[140px] flex items-center px-6 sm:px-14 py-8">
+          <h2 class="archivo-heading text-[#1d252d] dark:text-white text-3xl sm:text-4xl lg:text-[50px] font-[620] leading-[1.2] lg:leading-[60px] tracking-[-2.1px]">
+            Frequently asked questions
+          </h2>
+        </div>
+
+        <!-- Accordion 2-Column Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-[#ced6dd] dark:divide-[#242E38] border-b border-[#ced6dd] dark:border-[#242E38]">
+          <!-- Column 1 -->
+          <div class="divide-y divide-[#ced6dd] dark:divide-[#242E38]">
+            <!-- Q1 (Default Open in Figma) -->
+            <div class="faq-item is-open py-[22px] px-5 sm:p-8 transition-colors hover:bg-white/50 dark:hover:bg-[#12181F]/50">
+              <button type="button" class="faq-question-btn w-full flex items-center sm:items-start gap-4 sm:gap-5 text-left group cursor-pointer" aria-expanded="true">
+                <div class="faq-icon-box w-[36px] h-[36px] sm:w-[44px] sm:h-[45px] rounded-[6px] bg-[#edf2f5] dark:bg-[#1B242D] flex items-center justify-center shrink-0 transition-transform duration-300">
+                  <img src="assets/e92885e5edf14a2f634fda8587a7c897aadb27db.svg" alt="" class="w-[18px] h-[18px] sm:w-6 sm:h-6 faq-icon transition-transform duration-300 rotate-45" />
+                </div>
+                <span class="font-sans font-semibold text-[16.5px] sm:text-[18px] text-[#1d252d] dark:text-white tracking-[-0.3px] sm:tracking-[-0.54px] pt-0 sm:pt-2.5 leading-snug">
+                  What AI solutions do you build?
+                </span>
+              </button>
+              <div class="faq-answer-panel mt-3.5 sm:mt-4 pl-[52px] sm:pl-[64px] pr-2 text-[#1d252d]/80 dark:text-[#F2F1EE]/80 text-[15px] sm:text-base leading-relaxed">
+                <p>We build AI solutions for your business. From chatbots and WhatsApp automation to custom apps and workflows, we help you explore the right approach for your team and goals.</p>
+              </div>
+            </div>
+
+            <!-- Q2 -->
+            <div class="faq-item py-[22px] px-5 sm:p-8 transition-colors hover:bg-white/50 dark:hover:bg-[#12181F]/50">
+              <button type="button" class="faq-question-btn w-full flex items-center sm:items-start gap-4 sm:gap-5 text-left group cursor-pointer" aria-expanded="false">
+                <div class="faq-icon-box w-[36px] h-[36px] sm:w-[44px] sm:h-[45px] rounded-[6px] bg-[#edf2f5] dark:bg-[#1B242D] flex items-center justify-center shrink-0 transition-transform duration-300">
+                  <img src="assets/e92885e5edf14a2f634fda8587a7c897aadb27db.svg" alt="" class="w-[18px] h-[18px] sm:w-6 sm:h-6 faq-icon transition-transform duration-300" />
+                </div>
+                <span class="font-sans font-semibold text-[16.5px] sm:text-[18px] text-[#1d252d] dark:text-white tracking-[-0.3px] sm:tracking-[-0.54px] pt-0 sm:pt-2.5 leading-snug">
+                  Can you connect AI to our existing systems?
+                </span>
+              </button>
+              <div class="faq-answer-panel hidden mt-3.5 sm:mt-4 pl-[52px] sm:pl-[64px] pr-2 text-[#1d252d]/80 dark:text-[#F2F1EE]/80 text-[15px] sm:text-base leading-relaxed">
+                <p>Yes. We integrate with your existing CRM, ERP, databases, and third-party APIs (Salesforce, HubSpot, SAP, PostgreSQL, Shopify, etc.) ensuring smooth end-to-end data flow with bank-grade security.</p>
+              </div>
+            </div>
+
+            <!-- Q3 -->
+            <div class="faq-item py-[22px] px-5 sm:p-8 transition-colors hover:bg-white/50 dark:hover:bg-[#12181F]/50">
+              <button type="button" class="faq-question-btn w-full flex items-center sm:items-start gap-4 sm:gap-5 text-left group cursor-pointer" aria-expanded="false">
+                <div class="faq-icon-box w-[36px] h-[36px] sm:w-[44px] sm:h-[45px] rounded-[6px] bg-[#edf2f5] dark:bg-[#1B242D] flex items-center justify-center shrink-0 transition-transform duration-300">
+                  <img src="assets/e92885e5edf14a2f634fda8587a7c897aadb27db.svg" alt="" class="w-[18px] h-[18px] sm:w-6 sm:h-6 faq-icon transition-transform duration-300" />
+                </div>
+                <span class="font-sans font-semibold text-[16.5px] sm:text-[18px] text-[#1d252d] dark:text-white tracking-[-0.3px] sm:tracking-[-0.54px] pt-0 sm:pt-2.5 leading-snug">
+                  Can you build custom web and mobile apps too?
+                </span>
+              </button>
+              <div class="faq-answer-panel hidden mt-3.5 sm:mt-4 pl-[52px] sm:pl-[64px] pr-2 text-[#1d252d]/80 dark:text-[#F2F1EE]/80 text-[15px] sm:text-base leading-relaxed">
+                <p>Absolutely. We build modern, high-performance web applications, progressive web apps, and native mobile apps (iOS &amp; Android) equipped with intelligent AI capabilities from day one.</p>
+              </div>
+            </div>
+
+            <!-- Q4 -->
+            <div class="faq-item py-[22px] px-5 sm:p-8 transition-colors hover:bg-white/50 dark:hover:bg-[#12181F]/50">
+              <button type="button" class="faq-question-btn w-full flex items-center sm:items-start gap-4 sm:gap-5 text-left group cursor-pointer" aria-expanded="false">
+                <div class="faq-icon-box w-[36px] h-[36px] sm:w-[44px] sm:h-[45px] rounded-[6px] bg-[#edf2f5] dark:bg-[#1B242D] flex items-center justify-center shrink-0 transition-transform duration-300">
+                  <img src="assets/e92885e5edf14a2f634fda8587a7c897aadb27db.svg" alt="" class="w-[18px] h-[18px] sm:w-6 sm:h-6 faq-icon transition-transform duration-300" />
+                </div>
+                <span class="font-sans font-semibold text-[16.5px] sm:text-[18px] text-[#1d252d] dark:text-white tracking-[-0.3px] sm:tracking-[-0.54px] pt-0 sm:pt-2.5 leading-snug">
+                  How can WhatsApp automation support my business?
+                </span>
+              </button>
+              <div class="faq-answer-panel hidden mt-3.5 sm:mt-4 pl-[52px] sm:pl-[64px] pr-2 text-[#1d252d]/80 dark:text-[#F2F1EE]/80 text-[15px] sm:text-base leading-relaxed">
+                <p>WhatsApp automation allows you to qualify leads 24/7, accept orders, send reminders, broadcast product updates, and resolve customer queries instantly inside the messaging app your customers already love.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="divide-y divide-[#ced6dd] dark:divide-[#242E38]">
+            <!-- Q5 -->
+            <div class="faq-item py-[22px] px-5 sm:p-8 transition-colors hover:bg-white/50 dark:hover:bg-[#12181F]/50">
+              <button type="button" class="faq-question-btn w-full flex items-center sm:items-start gap-4 sm:gap-5 text-left group cursor-pointer" aria-expanded="false">
+                <div class="faq-icon-box w-[36px] h-[36px] sm:w-[44px] sm:h-[45px] rounded-[6px] bg-[#edf2f5] dark:bg-[#1B242D] flex items-center justify-center shrink-0 transition-transform duration-300">
+                  <img src="assets/e92885e5edf14a2f634fda8587a7c897aadb27db.svg" alt="" class="w-[18px] h-[18px] sm:w-6 sm:h-6 faq-icon transition-transform duration-300" />
+                </div>
+                <span class="font-sans font-semibold text-[16.5px] sm:text-[18px] text-[#1d252d] dark:text-white tracking-[-0.3px] sm:tracking-[-0.54px] pt-0 sm:pt-2.5 leading-snug">
+                  How long does it take to launch your products?
+                </span>
+              </button>
+              <div class="faq-answer-panel hidden mt-3.5 sm:mt-4 pl-[52px] sm:pl-[64px] pr-2 text-[#1d252d]/80 dark:text-[#F2F1EE]/80 text-[15px] sm:text-base leading-relaxed">
+                <p>Our turnkey AI solutions can be deployed in 2 to 4 weeks. Custom enterprise builds typically take 6 to 10 weeks depending on integration complexity.</p>
+              </div>
+            </div>
+
+            <!-- Q6 -->
+            <div class="faq-item py-[22px] px-5 sm:p-8 transition-colors hover:bg-white/50 dark:hover:bg-[#12181F]/50">
+              <button type="button" class="faq-question-btn w-full flex items-center sm:items-start gap-4 sm:gap-5 text-left group cursor-pointer" aria-expanded="false">
+                <div class="faq-icon-box w-[36px] h-[36px] sm:w-[44px] sm:h-[45px] rounded-[6px] bg-[#edf2f5] dark:bg-[#1B242D] flex items-center justify-center shrink-0 transition-transform duration-300">
+                  <img src="assets/e92885e5edf14a2f634fda8587a7c897aadb27db.svg" alt="" class="w-[18px] h-[18px] sm:w-6 sm:h-6 faq-icon transition-transform duration-300" />
+                </div>
+                <span class="font-sans font-semibold text-[16.5px] sm:text-[18px] text-[#1d252d] dark:text-white tracking-[-0.3px] sm:tracking-[-0.54px] pt-0 sm:pt-2.5 leading-snug">
+                  Where do I start with AI?
+                </span>
+              </button>
+              <div class="faq-answer-panel hidden mt-3.5 sm:mt-4 pl-[52px] sm:pl-[64px] pr-2 text-[#1d252d]/80 dark:text-[#F2F1EE]/80 text-[15px] sm:text-base leading-relaxed">
+                <p>Start with a high-ROI, repetitive workflow such as inbound lead qualification, customer support FAQs, or automated notifications. Book a free consultation call with us to review your business processes.</p>
+              </div>
+            </div>
+
+            <!-- Q7 -->
+            <div class="faq-item py-[22px] px-5 sm:p-8 transition-colors hover:bg-white/50 dark:hover:bg-[#12181F]/50">
+              <button type="button" class="faq-question-btn w-full flex items-center sm:items-start gap-4 sm:gap-5 text-left group cursor-pointer" aria-expanded="false">
+                <div class="faq-icon-box w-[36px] h-[36px] sm:w-[44px] sm:h-[45px] rounded-[6px] bg-[#edf2f5] dark:bg-[#1B242D] flex items-center justify-center shrink-0 transition-transform duration-300">
+                  <img src="assets/e92885e5edf14a2f634fda8587a7c897aadb27db.svg" alt="" class="w-[18px] h-[18px] sm:w-6 sm:h-6 faq-icon transition-transform duration-300" />
+                </div>
+                <span class="font-sans font-semibold text-[16.5px] sm:text-[18px] text-[#1d252d] dark:text-white tracking-[-0.3px] sm:tracking-[-0.54px] pt-0 sm:pt-2.5 leading-snug">
+                  Can you help us plan our AI implementation?
+                </span>
+              </button>
+              <div class="faq-answer-panel hidden mt-3.5 sm:mt-4 pl-[52px] sm:pl-[64px] pr-2 text-[#1d252d]/80 dark:text-[#F2F1EE]/80 text-[15px] sm:text-base leading-relaxed">
+                <p>Yes, we offer strategic AI consulting, data readiness assessments, and technical architecture planning to ensure your AI investments deliver measurable business impact.</p>
+              </div>
+            </div>
+
+            <!-- Q8 -->
+            <div class="faq-item py-[22px] px-5 sm:p-8 transition-colors hover:bg-white/50 dark:hover:bg-[#12181F]/50">
+              <button type="button" class="faq-question-btn w-full flex items-center sm:items-start gap-4 sm:gap-5 text-left group cursor-pointer" aria-expanded="false">
+                <div class="faq-icon-box w-[36px] h-[36px] sm:w-[44px] sm:h-[45px] rounded-[6px] bg-[#edf2f5] dark:bg-[#1B242D] flex items-center justify-center shrink-0 transition-transform duration-300">
+                  <img src="assets/e92885e5edf14a2f634fda8587a7c897aadb27db.svg" alt="" class="w-[18px] h-[18px] sm:w-6 sm:h-6 faq-icon transition-transform duration-300" />
+                </div>
+                <span class="font-sans font-semibold text-[16.5px] sm:text-[18px] text-[#1d252d] dark:text-white tracking-[-0.3px] sm:tracking-[-0.54px] pt-0 sm:pt-2.5 leading-snug">
+                  How do I book a consultation with your team?
+                </span>
+              </button>
+              <div class="faq-answer-panel hidden mt-3.5 sm:mt-4 pl-[52px] sm:pl-[64px] pr-2 text-[#1d252d]/80 dark:text-[#F2F1EE]/80 text-[15px] sm:text-base leading-relaxed">
+                <p>Simply click the "Book My Free Consultation" button anywhere on this page, choose a convenient slot, and our senior AI architects will prepare a custom blueprint for your business.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phone Contact Support Bar -->
+        <div class="min-h-[110px] py-8 sm:py-4 flex items-center justify-center px-4 sm:px-6 border-b border-[#ced6dd] dark:border-[#242E38]">
+          <a href="tel:+919496245337" class="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-3 py-2 px-2 sm:px-4 text-center">
+            <span class="font-mono text-[11px] sm:text-xs font-semibold tracking-[1.2px] sm:tracking-[1.65px] uppercase text-[#101014]/60 dark:text-white/60 whitespace-nowrap">
+              Have any question? <span class="text-[#1d252d] dark:text-white">call us on :</span>
+            </span>
+            <div class="flex items-center gap-2 text-[#101014]/80 dark:text-white/80 whitespace-nowrap">
+              <img src="assets/50cc63932d50067a231f576f801f6b08995fd59b.svg" alt="" class="w-[19px] h-[19px] dark:brightness-0 dark:invert" />
+              <span class="font-mono text-xs font-semibold tracking-[1.65px] uppercase">+91 9496 245 337</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         PRE-FOOTER CTA ("Let's build your AI advantage")
+         ========================================================================= -->
+    <section class="section-band bg-[#f9fafb] dark:bg-[#0B0F13] border-b border-[#ced6dd] dark:border-[#242E38] relative overflow-hidden">
+      <div class="site-frame-1200">
+        <!-- Central Dark Box (1200px wide, exactly like Figma) -->
+        <div class="bg-[#1d252d] min-h-0 sm:min-h-[547px] relative overflow-hidden flex flex-col justify-between text-center">
+          
+          <!-- Headline & Subheadline container (Symmetric top & bottom padding on mobile) -->
+          <div class="py-14 sm:pt-24 sm:pb-8 px-6 flex flex-col items-center justify-center">
+            <h2 class="archivo-heading text-[#eef2f5] text-4xl sm:text-5xl lg:text-[70px] font-[620] leading-[1.1] sm:leading-[69px] tracking-[-2.1px] max-w-4xl">
+              Let's build your <br class="hidden sm:inline">AI advantage.
+            </h2>
+
+            <p class="font-sans font-normal text-base sm:text-lg text-[#eef2f5]/80 mt-6 sm:mt-7 max-w-lg leading-[26px] sm:leading-[30px]">
+              Book a <strong class="font-bold text-white">free 30-minute consultation</strong>.<br class="inline sm:hidden"> We'll show you what's possible<br class="inline sm:hidden"> for your business.
+            </p>
+          </div>
+
+          <!-- Bottom CTA Button Bar (Component 10: centered content, exact Figma match) -->
+          <div class="cta-banner-btn cta-banner-consultation w-full bg-[#d22630] h-[105px] relative overflow-hidden flex items-center justify-center cursor-pointer group select-none" onclick="openConsultationModal()">
+            <!-- Smooth Red Sweep Background -->
+            <div class="cta-sweep-bg bg-[#d22630] absolute inset-0 pointer-events-none"></div>
+
+            <!-- Content Row (Strictly Centered, w-[344px] as in Figma) -->
+            <div class="cta-consultation-centered relative z-10 w-[344px] flex items-center justify-between">
+              <span class="font-mono text-[16px] font-normal leading-[18.5px] tracking-[1.65px] uppercase text-white whitespace-nowrap">
+                Book My Free Consultation
+              </span>
+              <div class="cta-icon-box w-[42px] h-[41px] bg-[#eef2f5] rounded flex items-center justify-center shrink-0 shadow-sm relative overflow-hidden">
+                <img src="assets/f54f5b9bd1123cee6a116cb4fab8b94bd6797d5d.svg" alt="" class="cta-icon-default absolute w-6 h-6" />
+                <img src="assets/6ee1927149d47d923d5b183b9ca6a2f2eeb82c20.svg" alt="" class="cta-icon-hover absolute w-6 h-6" />
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         FOOTER
+         ========================================================================= -->
+    <footer class="section-band bg-white dark:bg-[#12181F] text-[#1d252d] dark:text-[#F2F1EE]">
+      <div class="site-frame-1200">
+        <!-- Logo Area -->
+        <div class="h-[180px] sm:h-[209px] flex items-center justify-center border-b border-[#ced6dd] dark:border-[#242E38] px-6">
+          <a href="#" class="inline-block transition-opacity hover:opacity-85" aria-label="Limenzy Technologies">
+            <img src="assets/limenzy_footer_logo.png" alt="Limenzy Technologies Pvt Ltd" class="dark:hidden h-12 sm:h-14 w-auto object-contain" />
+            <img src="assets/limenzy_footer_logo_dark.png" alt="Limenzy Technologies Pvt Ltd" class="hidden dark:block h-12 sm:h-14 w-auto object-contain" />
+          </a>
+        </div>
+
+        <!-- Copyright & Social Links Row -->
+        <div class="min-h-[86px] py-6 sm:py-4 px-6 sm:px-10 flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-4">
+          <p class="font-mono text-xs sm:text-sm font-medium tracking-[1.65px] uppercase text-[#101014]/50 dark:text-white/50 text-center sm:text-left">
+            &copy; 2026 Limenzy technologies
+          </p>
+
+          <!-- Social Icons Row (sleek, smaller icons with comfortable spacing) -->
+          <div class="flex items-center gap-4 sm:gap-6">
+            <a href="https://wa.me/" target="_blank" rel="noopener" class="w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center text-[#101014]/70 dark:text-white/70 hover:text-[#25D366] hover:scale-110 transition-all" aria-label="Chat with us on WhatsApp">
+              <img src="assets/1294d1d834516d6a1b8a51fc369412a13a2103a6.svg" alt="WhatsApp" class="footer-social-icon w-full h-full object-contain" />
+            </a>
+            <a href="https://facebook.com/" target="_blank" rel="noopener" class="w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center text-[#101014]/70 dark:text-white/70 hover:text-[#1877F2] hover:scale-110 transition-all" aria-label="Enquire with us on Facebook">
+              <img src="assets/9599e8b337a0d80c7c35051d6508abd265fd4c66.svg" alt="Facebook" class="footer-social-icon w-full h-full object-contain" />
+            </a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener" class="w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center text-[#101014]/70 dark:text-white/70 hover:text-[#1DA1F2] hover:scale-110 transition-all" aria-label="Find our tweets on Twitter">
+              <img src="assets/bf2558a5c7164d2af81ececae82081435c60fe3c.svg" alt="Twitter" class="footer-social-icon w-full h-full object-contain" />
+            </a>
+            <a href="https://youtube.com/" target="_blank" rel="noopener" class="w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center text-[#101014]/70 dark:text-white/70 hover:text-[#FF0000] hover:scale-110 transition-all" aria-label="Find us on YouTube">
+              <img src="assets/f40e4f5d3bd00515fa772b5b43ec42b752b2055e.svg" alt="YouTube" class="footer-social-icon w-full h-full object-contain" />
+            </a>
+            <a href="https://instagram.com/" target="_blank" rel="noopener" class="w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center text-[#101014]/70 dark:text-white/70 hover:text-[#E4405F] hover:scale-110 transition-all" aria-label="See our feeds on Instagram">
+              <img src="assets/37f822bd502bcfde1c9ef94166202e84684ebdf0.svg" alt="Instagram" class="footer-social-icon w-full h-full object-contain" />
+            </a>
+            <a href="https://linkedin.com/" target="_blank" rel="noopener" class="w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center text-[#101014]/70 dark:text-white/70 hover:text-[#0A66C2] hover:scale-110 transition-all" aria-label="Connect with us on LinkedIn">
+              <img src="assets/d67b058ac0e85fb1703fb143cd4460273ed0c006.svg" alt="LinkedIn" class="footer-social-icon w-full h-full object-contain" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- =========================================================================
+       CONSULTATION BOOKING MODAL (Minimal, Modern & Fun)
+       ========================================================================= -->
+  <div id="consultationModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card-v2 relative bg-white dark:bg-[#121820] border border-[#ced6dd] dark:border-[#242E38] rounded-2xl shadow-2xl overflow-hidden w-full max-w-[520px] max-h-[92vh]" data-lenis-prevent>
+      
+      <!-- Close Button -->
+      <button id="closeModalBtn" type="button" class="absolute top-3.5 right-3.5 w-8 h-8 rounded-full bg-black/5 dark:bg-white/10 hover:bg-black/10 dark:hover:bg-white/20 flex items-center justify-center text-[#1d252d] dark:text-white transition-colors z-20 cursor-pointer" aria-label="Close dialog">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Modal Body -->
+      <div class="p-6 sm:p-7 flex flex-col justify-between overflow-y-auto">
+        <!-- Header -->
+        <div class="pb-4 mb-4 border-b border-[#ced6dd] dark:border-[#242E38] pr-8">
+          <div class="flex items-center gap-1.5 font-mono text-[10.5px] font-semibold tracking-wider text-[#d22630] uppercase">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#d22630] animate-pulse"></span>
+            <span>01 / FREE CONSULTATION</span>
+          </div>
+          <h2 id="modalTitle" class="archivo-heading text-2xl font-bold text-[#1d252d] dark:text-white leading-tight mt-1">
+            Tell us what you're building.
+          </h2>
+          <p class="font-sans text-[13px] text-[#101014]/65 dark:text-white/65 mt-1">
+            Pick what you're curious about and we'll prep custom demos for you.
+          </p>
+        </div>
+
+        <!-- The Minimal & Fun Form -->
+        <form id="bookingForm" class="flex flex-col gap-3.5">
+          <!-- Topic Selector Chips -->
+          <div>
+            <label class="block font-mono text-[11px] font-semibold tracking-wider uppercase text-[#101014]/60 dark:text-white/60 mb-2">
+              I'm curious about:
+            </label>
+            <div class="flex flex-wrap gap-1.5 sm:gap-2" id="modalTopicPills">
+              <button type="button" class="topic-pill is-active" data-topic="whatsapp">💬 WhatsApp Bot</button>
+              <button type="button" class="topic-pill" data-topic="chatbot">🤖 AI Assistant</button>
+              <button type="button" class="topic-pill" data-topic="custom-ai">⚡ Custom AI / CRM</button>
+              <button type="button" class="topic-pill" data-topic="apps">📱 Web &amp; Mobile App</button>
+              <button type="button" class="topic-pill" data-topic="exploring">💡 Just Exploring</button>
+            </div>
+            <input type="hidden" name="selectedTopic" id="selectedTopicInput" value="whatsapp" />
+          </div>
+
+          <!-- 2 Essential Inputs: Name & Contact -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-0.5">
+            <div>
+              <label class="block font-mono text-[11px] font-semibold tracking-wider uppercase text-[#101014]/60 dark:text-white/60 mb-1.5" for="clientName">
+                Your Name <span class="text-[#d22630]">*</span>
+              </label>
+              <input type="text" id="clientName" required placeholder="e.g. Alex Smith" class="modal-clean-input" />
+            </div>
+            <div>
+              <label class="block font-mono text-[11px] font-semibold tracking-wider uppercase text-[#101014]/60 dark:text-white/60 mb-1.5" for="clientContact">
+                WhatsApp or Email <span class="text-[#d22630]">*</span>
+              </label>
+              <input type="text" id="clientContact" required placeholder="+971 50... or alex@co.com" class="modal-clean-input" />
+            </div>
+          </div>
+
+          <!-- Optional Company / Quick Context -->
+          <div>
+            <label class="block font-mono text-[11px] font-semibold tracking-wider uppercase text-[#101014]/60 dark:text-white/60 mb-1.5" for="clientCompany">
+              Company or One-Line Idea <span class="text-[10px] text-[#101014]/40 dark:text-white/40 font-normal lowercase">(optional)</span>
+            </label>
+            <input type="text" id="clientCompany" placeholder="e.g. Acme Corp / Automating our inbound support" class="modal-clean-input" />
+          </div>
+
+          <!-- Submit Button: Red, matching Figma CTA button style -->
+          <div class="pt-2">
+            <button type="submit" class="w-full h-[48px] bg-[#d22630] hover:bg-[#b81d26] text-white font-mono text-xs tracking-[1.65px] uppercase font-semibold rounded-lg flex items-center justify-center gap-3 transition-colors shadow-sm cursor-pointer group">
+              <span>Book 30-Min Free Chat</span>
+              <span class="w-6 h-6 bg-white/15 rounded flex items-center justify-center group-hover:bg-white/25 transition-colors">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </span>
+            </button>
+            <div class="flex items-center justify-center gap-2 mt-2 text-[10.5px] font-mono text-[#101014]/50 dark:text-white/50">
+              <span>⚡ 2-hour response</span>
+              <span>·</span>
+              <span>Zero spam</span>
+              <span>·</span>
+              <span>100% human</span>
+            </div>
+          </div>
+        </form>
+
+        <!-- Fun Celebratory Success Confirmation State -->
+        <div id="formSuccess" class="modal-success hidden py-6 px-2 flex flex-col items-center text-center">
+          <div class="w-14 h-14 rounded-full bg-[#d22630]/10 flex items-center justify-center mb-3.5">
+            <span class="text-2xl">🙌</span>
+          </div>
+          <h3 class="font-sans text-xl font-bold text-[#1d252d] dark:text-white mb-1.5">High five! You're booked.</h3>
+          <p class="font-sans text-sm text-[#101014]/70 dark:text-white/70 max-w-sm mb-5 leading-relaxed">
+            One of our AI engineers will review your note and ping you on WhatsApp or Email within 2 hours with available time slots.
+          </p>
+          
+          <!-- Immediate WhatsApp Quick-Connect -->
+          <a href="https://wa.me/919496245337?text=Hi%20Limenzy%20team,%20I%20just%20requested%20an%20AI%20consultation!" target="_blank" rel="noopener" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-[#25D366]/10 hover:bg-[#25D366]/20 text-[#128C7E] dark:text-[#25D366] font-mono text-xs font-semibold tracking-wider uppercase transition-colors mb-4 border border-[#25D366]/30">
+            <img src="assets/1294d1d834516d6a1b8a51fc369412a13a2103a6.svg" alt="" class="w-4 h-4" />
+            <span>Or message us right now on WhatsApp</span>
+          </a>
+
+          <div>
+            <button id="successCloseBtn" type="button" class="px-6 py-2 rounded-md bg-[#1d252d] dark:bg-white text-white dark:text-[#1d252d] font-mono text-xs font-semibold tracking-wider uppercase hover:opacity-90 transition-opacity cursor-pointer">
+              Done
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <!-- Toast Notification (Phone Copied Feedback) -->
+  <div id="toastNotice" class="toast-notice" role="status" aria-live="polite">
+    <svg class="w-4 h-4 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+    </svg>
+    <span id="toastMessage">Phone number copied: +91 9496 245 337</span>
+  </div>
+
+  <!-- Inline Guaranteed Accordion Dispatcher & Service Data -->
+  <script>
+    window.serviceData = {
+      '1': {
+        num: '1',
+        title: 'AI Chatbots & Assistants',
+        desc: 'Answer, qualify and book, around the clock.',
+        img: 'assets/service_1_chatbots.png',
+        imgDark: 'assets/service_1_chatbots_dark.png'
+      },
+      '2': {
+        num: '2',
+        title: 'WhatsApp Business Automation',
+        desc: 'Campaigns, support and sales inside WhatsApp.',
+        img: 'assets/service_2_whatsapp.png',
+        imgDark: 'assets/service_2_whatsapp_dark.png'
+      },
+      '3': {
+        num: '3',
+        title: 'Custom AI Solutions',
+        desc: 'Models and tools built around your data and workflows.',
+        img: 'assets/service_3_custom_ai.png',
+        imgDark: 'assets/service_3_custom_ai_dark.png'
+      },
+      '4': {
+        num: '4',
+        title: 'Web & Mobile App Development',
+        desc: 'Fast, scalable products your customers enjoy.',
+        img: 'assets/service_4_web_mobile.png',
+        imgDark: 'assets/service_4_web_mobile_dark.png'
+      },
+      '5': {
+        num: '5',
+        title: 'Workflow & Process Automation',
+        desc: 'Remove repetitive tasks across your teams.',
+        img: 'assets/service_5_workflow.png',
+        imgDark: 'assets/service_5_workflow_dark.png'
+      },
+      '6': {
+        num: '6',
+        title: 'AI Consulting & Integration',
+        desc: 'Connect AI to your CRM, ERP and existing systems.',
+        img: 'assets/service_6_consulting.png',
+        imgDark: 'assets/service_6_consulting_dark.png'
+      }
+    };
+
+    window.openServiceTab = function(id) {
+      var targetGroup = document.querySelector('.service-tab-group[data-service="' + id + '"]');
+      var targetBtn = document.querySelector('.service-tab-btn[data-service="' + id + '"]');
+      var allGroups = document.querySelectorAll('.service-tab-group');
+      var allBtns = document.querySelectorAll('.service-tab-btn');
+
+      if (!targetGroup || !targetBtn) return;
+
+      allGroups.forEach(function(g) {
+        if (g.getAttribute('data-service') === String(id)) {
+          g.classList.add('is-active');
+        } else {
+          g.classList.remove('is-active');
+        }
+      });
+
+      allBtns.forEach(function(b) {
+        if (b.getAttribute('data-service') === String(id)) {
+          b.classList.add('is-active');
+        } else {
+          b.classList.remove('is-active');
+        }
+      });
+
+      var data = window.serviceData ? window.serviceData[id] : null;
+      if (data) {
+        var card = document.getElementById('serviceDisplayCard');
+        var num = document.getElementById('serviceDisplayNum');
+        var title = document.getElementById('serviceDisplayTitle');
+        var desc = document.getElementById('serviceDisplayDesc');
+        var graphicLight = document.getElementById('serviceDisplayGraphic');
+        var graphicDark = document.getElementById('serviceDisplayGraphicDark');
+        if (card) {
+          card.style.opacity = '0.5';
+          setTimeout(function() {
+            if (num) num.textContent = data.num;
+            if (title) title.textContent = data.title;
+            if (desc) desc.textContent = data.desc;
+            if (graphicLight) graphicLight.src = data.img;
+            if (graphicDark) graphicDark.src = data.imgDark || data.img;
+            card.style.opacity = '1';
+          }, 150);
+        }
+      }
+    };
+  </script>
+
+  <!-- Lenis Smooth Scrolling Engine -->
+  <script src="lenis.min.js"></script>
+
+  <!-- JavaScript -->
+  <script src="script.js?v=fresh_20261118_v6"></script>
+</body>
+
+</html>
